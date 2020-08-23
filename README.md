@@ -23,14 +23,14 @@
 ### Designs
 
 Landing Page
-![alt text](./designs/landing-page.png "Landing Page Design")
+![alt text](https://github.com/AGhafoor94/xibit/raw/master/designs/landing-page.png "Landing Page Design")
 Login Page
-![alt text](./designs/login-page.png "Landing Page Design")
+![alt text](https://github.com/AGhafoor94/xibit/raw/master//designs/login-page.png "Landing Page Design")
 List of Items Page
-![alt text](./designs/list-of-items-page.png "Landing Page Design")
+![alt text](https://github.com/AGhafoor94/xibit/raw/master//designs/list-of-items-page.png "Landing Page Design")
 Modal Page
-![alt text](./designs/modal-clicked-on-item.png "Landing Page Design")
+![alt text](https://github.com/AGhafoor94/xibit/raw/master//designs/modal-clicked-on-item.png "Landing Page Design")
 Full view of zoo Page
-![alt text](./designs/full-view-of-zoo.png "Landing Page Design")
+![alt text](https://github.com/AGhafoor94/xibit/raw/master//designs/full-view-of-zoo.png "Landing Page Design")
 
 ## Done
