@@ -31,6 +31,6 @@ List of Items Page
 Modal Page
 ![alt text](https://github.com/AGhafoor94/xibit/raw/master//designs/modal-clicked-on-item.png "Landing Page Design")
 Full view of zoo Page
-![alt text](https://github.com/AGhafoor94/xibit/raw/master//designs/full-view-of-zoo.png "Landing Page Design")
+![alt text](https://github.com/AGhafoor94/xibit/blob/start-page/designs/full-view-of-zoo.PNG "Landing Page Design")
 
 ## Done
