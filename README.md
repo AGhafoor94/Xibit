@@ -19,3 +19,18 @@
 - Show full map page
   - You put your address in or zoo name/closest zoo and it will show the map location and rating
   - Can add to profile or view the website
+
+### Designs
+
+Landing Page
+![alt text](./designs/landing-page.png "Landing Page Design")
+Login Page
+![alt text](./designs/login-page.png "Landing Page Design")
+List of Items Page
+![alt text](./designs/list-of-items-page.png "Landing Page Design")
+Modal Page
+![alt text](./designs/modal-clicked-on-item.png "Landing Page Design")
+Full view of zoo Page
+![alt text](./designs/full-view-of-zoo.png "Landing Page Design")
+
+## Done
