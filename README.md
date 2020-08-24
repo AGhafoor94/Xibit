@@ -33,4 +33,12 @@ Modal Page
 Full view of zoo Page
 ![alt text](https://github.com/AGhafoor94/xibit/blob/master/designs/full-view-of-zoo.PNG "Landing Page Design")
 
+### Colour Scheme
+
+- Dark Blue: #132543
+- Blue: #1671C5
+- Orange: #FEA000
+- Light Green: #669900
+- Dark Green: #449D44
+
 ## Done
