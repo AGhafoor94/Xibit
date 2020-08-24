@@ -12,7 +12,17 @@
     animation: App-logo-spin infinite 20s linear;
   }
 }
-
+.firstColumn {
+  background-color: red;
+}
+@media only screen and (max-width: 768px) {
+  .firstColumn {
+    display: none;
+  }
+  .secondColumn {
+    width: "100%";
+  }
+}
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
