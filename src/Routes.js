@@ -3,8 +3,15 @@ import { HashRouter, Switch, Route } from "react-router-dom";
 import { AppContext } from "./App";
 import Homepage from "./components/Homepage/Homepage";
 import Login from "./components/Loginpage/Login";
-import Navigation from "./components/Navigation/Navigation";
 
+// const UnauthorisedWrapper = (props) => {
+//   return (
+//     <div>
+//       <p>Please login before accessing the welcome page</p>
+//       {props.children}
+//     </div>
+//   );
+// };
 const Routes = () => {
   const appContext = useContext(AppContext);
   const { user } = appContext;
@@ -14,13 +21,18 @@ const Routes = () => {
   return (
     <HashRouter>
       <div>
-        <Navigation />
         <Switch>
           <Route path="/login">
             <Login />
           </Route>
           <Route path="/welcome">
-            <Homepage />
+            {user.token ? (
+              <Homepage />
+            ) : (
+              //<UnauthorisedWrapper>
+              <Homepage />
+              //</UnauthorisedWrapper>
+            )}
           </Route>
         </Switch>
       </div>

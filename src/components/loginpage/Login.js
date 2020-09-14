@@ -42,6 +42,7 @@ const LoginPage = () => {
             onSubmit={onSubmit}
           />
         }
+        colour="#FEA000"
       />
     </div>
   );

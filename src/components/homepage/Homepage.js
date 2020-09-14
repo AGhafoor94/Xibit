@@ -7,7 +7,7 @@ const Homepage = () => {
     <div>
       <BasePage
         component={<WelcomePageComponent header="Xibit" />}
-        colour="red"
+        colour="#1F4366"
       />
     </div>
   );
