@@ -34,7 +34,7 @@ const WelcomePageComponent = ({ header }) => {
           </Button>
         </Link>
       </div>
-      <div style={{ marginTop: "20%" }}>
+      <div style={{ margin: "50% auto" }}>
         <h1 style={{ textAlign: "center", fontSize: "7rem", color: "#FEA000" }}>
           {header}
         </h1>
