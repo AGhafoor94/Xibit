@@ -1,13 +1,20 @@
 import React from "react";
 import "./App.css";
-import Button from "@material-ui/core/Button";
+import { Box, Columns } from "react-bulma-components";
 
 const App = () => {
   return (
     <div>
-      <Button variant="contained" color="primary">
-        Hello World
-      </Button>
+      <Box>
+        <Columns breakpoint="desktop">
+          <Columns.Column>
+            <p className="bd-notification is-success">First Column</p>
+          </Columns.Column>
+          <Columns.Column>
+            <p className="bd-notification is-info">Second Column</p>
+          </Columns.Column>
+        </Columns>
+      </Box>
     </div>
   );
 };
