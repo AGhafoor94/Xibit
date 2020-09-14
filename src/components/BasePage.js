@@ -1,17 +1,13 @@
 import React from "react";
-import { Columns } from "react-bulma-components";
+import { Row, Col } from "antd";
 
-const BasePage = ({ component, colour }) => {
+const BasePage = () => {
   return (
     <div>
-      <Columns breakpoint="desktop" style={{ height: "100vh" }}>
-        <Columns.Column style={{ backgroundColor: { colour } }}>
-          <p className="bd-notification is-success">Facts component</p>
-        </Columns.Column>
-        <Columns.Column>
-          <p className="bd-notification is-info">{component}</p>
-        </Columns.Column>
-      </Columns>
+      <Row gutter={[8, 8]}>
+        <Col span={12} />
+        <Col span={12} />
+      </Row>
     </div>
   );
 };
