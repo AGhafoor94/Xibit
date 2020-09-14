@@ -5,7 +5,7 @@ import WelcomePageComponent from "./WelcomePage";
 const Homepage = () => {
   return (
     <div>
-      <BasePage component={<WelcomePageComponent />} />
+      <BasePage component={<WelcomePageComponent />} colour="red" />
     </div>
   );
 };

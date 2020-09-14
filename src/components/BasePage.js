@@ -1,11 +1,11 @@
 import React from "react";
 import { Columns } from "react-bulma-components";
 
-const BasePage = ({ component }) => {
+const BasePage = ({ component, colour }) => {
   return (
     <div>
       <Columns breakpoint="desktop" style={{ height: "100vh" }}>
-        <Columns.Column style={{ backgroundColor: "orange" }}>
+        <Columns.Column style={{ backgroundColor: { colour } }}>
           <p className="bd-notification is-success">Facts component</p>
         </Columns.Column>
         <Columns.Column>
