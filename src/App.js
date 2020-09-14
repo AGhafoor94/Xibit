@@ -1,13 +1,28 @@
 import React from "react";
 import "./App.css";
-import { Row, Col, Form, Input, Checkbox, Button } from "antd";
+import {
+  Row,
+  Col,
+  Form,
+  Input,
+  Checkbox,
+  Button,
+  Typography as Title,
+} from "antd";
 
 const App = () => {
   return (
     <div>
-      <Row style={{ height: "100vh" }}>
-        <Col className="gutter-row" span={12}>
-          <div>col-6</div>
+      <Row
+        gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}
+        style={{ height: "100vh" }}
+      >
+        <Col
+          className="gutter-row"
+          span={12}
+          style={{ backgroundColor: "orange" }}
+        >
+          <div>component here</div>
         </Col>
         <Col className="gutter-row" span={12}>
           <div
@@ -17,6 +32,16 @@ const App = () => {
               display: "block",
             }}
           >
+            <Title
+              style={{
+                textAlign: "center",
+                fontSize: "5rem",
+                fontWeight: "600",
+                color: "#FEA000",
+              }}
+            >
+              Log In
+            </Title>
             <Form
               name="normal_login"
               className="login-form"
@@ -28,7 +53,7 @@ const App = () => {
                   { required: true, message: "Please input your Username!" },
                 ]}
               >
-                <Input placeholder="Username" />
+                <Input placeholder="Username" style={{ padding: "10px" }} />
               </Form.Item>
               <Form.Item
                 name="password"
@@ -36,7 +61,11 @@ const App = () => {
                   { required: true, message: "Please input your Password!" },
                 ]}
               >
-                <Input type="password" placeholder="Password" />
+                <Input
+                  type="password"
+                  placeholder="Password"
+                  style={{ padding: "10px" }}
+                />
               </Form.Item>
               <Form.Item>
                 <Form.Item name="remember" valuePropName="checked" noStyle>
@@ -49,7 +78,11 @@ const App = () => {
                   type="primary"
                   htmlType="submit"
                   className="login-form-button"
-                  style={{ width: "48%" }}
+                  style={{
+                    width: "48%",
+                    backgroundColor: "#669900",
+                    border: "#669900",
+                  }}
                 >
                   Log in
                 </Button>
@@ -57,7 +90,12 @@ const App = () => {
                   type="primary"
                   htmlType="submit"
                   className="login-form-button"
-                  style={{ width: "48%", float: "right" }}
+                  style={{
+                    width: "48%",
+                    backgroundColor: "#FEA000",
+                    border: "#FEA000",
+                    float: "right",
+                  }}
                 >
                   Register
                 </Button>
