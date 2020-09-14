@@ -1,12 +1,13 @@
 import React from "react";
 import BasePage from "../BasePage";
+import LoginForm from "./LoginForm";
 
-const Homepage = () => {
+const LoginPage = () => {
   return (
     <div>
-      <BasePage component="login" colour="red" />
+      <BasePage component={<LoginForm />} colour="red" />
     </div>
   );
 };
 
-export default Homepage;
+export default LoginPage;

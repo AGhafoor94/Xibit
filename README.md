@@ -22,15 +22,21 @@
 
 ### Designs
 
-Landing Page
-![alt text](https://github.com/AGhafoor94/xibit/blob/master/designs/landing-page.PNG "Landing Page Design")
-Login Page
-![alt text](https://github.com/AGhafoor94/xibit/blob/master/designs/login-page.PNG "Landing Page Design")
-List of Items Page
-![alt text](https://github.com/AGhafoor94/xibit/blob/master/designs/list-of-items-page.PNG "Landing Page Design")
-Modal Page
-![alt text](https://github.com/AGhafoor94/xibit/blob/master/designs/modal-clicked-on-item.PNG "Landing Page Design")
-Full view of zoo Page
-![alt text](https://github.com/AGhafoor94/xibit/blob/master/designs/full-view-of-zoo.PNG "Landing Page Design")
+- Colour Scheme
+
+  - Orange: #FEA000
+  - Green: #669900
+  - Blue: #1F4366
+
+    Landing Page
+    ![alt text](https://github.com/AGhafoor94/xibit/blob/master/designs/landing-page.PNG "Landing Page Design")
+    Login Page
+    ![alt text](https://github.com/AGhafoor94/xibit/blob/master/designs/login-page.PNG "Landing Page Design")
+    List of Items Page
+    ![alt text](https://github.com/AGhafoor94/xibit/blob/master/designs/list-of-items-page.PNG "Landing Page Design")
+    Modal Page
+    ![alt text](https://github.com/AGhafoor94/xibit/blob/master/designs/modal-clicked-on-item.PNG "Landing Page Design")
+    Full view of zoo Page
+    ![alt text](https://github.com/AGhafoor94/xibit/blob/master/designs/full-view-of-zoo.PNG "Landing Page Design")
 
 ## Done
