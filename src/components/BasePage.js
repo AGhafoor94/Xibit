@@ -1,7 +1,7 @@
 import React from "react";
 import { Columns } from "react-bulma-components";
 
-const BasePage = () => {
+const BasePage = ({ component }) => {
   return (
     <div>
       <Columns breakpoint="desktop" style={{ height: "100vh" }}>
@@ -9,7 +9,7 @@ const BasePage = () => {
           <p className="bd-notification is-success">Facts component</p>
         </Columns.Column>
         <Columns.Column>
-          <p className="bd-notification is-info">Component</p>
+          <p className="bd-notification is-info">{component}</p>
         </Columns.Column>
       </Columns>
     </div>

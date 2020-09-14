@@ -1,11 +1,11 @@
 import React from "react";
 import "./App.css";
-import BasePage from "./components/BasePage";
+import Homepage from "./components/homepage/Homepage";
 
 const App = () => {
   return (
     <div>
-      <BasePage />
+      <Homepage />
     </div>
   );
 };
