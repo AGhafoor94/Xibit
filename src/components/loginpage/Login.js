@@ -5,7 +5,7 @@ import LoginForm from "./LoginForm";
 const LoginPage = () => {
   return (
     <div>
-      <BasePage component={<LoginForm />} colour="red" />
+      <BasePage component={<LoginForm />} />
     </div>
   );
 };
