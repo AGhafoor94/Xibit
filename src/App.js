@@ -10,7 +10,13 @@ const App = () => {
           <div>col-6</div>
         </Col>
         <Col className="gutter-row" span={12}>
-          <div style={{ width: "50%", margin: "0 auto", display: "block" }}>
+          <div
+            style={{
+              width: "50%",
+              margin: "50% auto",
+              display: "block",
+            }}
+          >
             <Form
               name="normal_login"
               className="login-form"
@@ -43,8 +49,17 @@ const App = () => {
                   type="primary"
                   htmlType="submit"
                   className="login-form-button"
+                  style={{ width: "48%" }}
                 >
                   Log in
+                </Button>
+                <Button
+                  type="primary"
+                  htmlType="submit"
+                  className="login-form-button"
+                  style={{ width: "48%", float: "right" }}
+                >
+                  Register
                 </Button>
               </Form.Item>
             </Form>
