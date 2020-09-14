@@ -5,7 +5,10 @@ import WelcomePageComponent from "./WelcomePage";
 const Homepage = () => {
   return (
     <div>
-      <BasePage component={<WelcomePageComponent />} colour="red" />
+      <BasePage
+        component={<WelcomePageComponent header="Xibit" />}
+        colour="red"
+      />
     </div>
   );
 };
