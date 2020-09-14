@@ -3,7 +3,15 @@ import { Form, Input, Checkbox, Button, Typography as Title } from "antd";
 
 const LoginForm = ({ emailChange, passwordChange, onSubmit }) => {
   return (
-    <div style={{ width: "50%", margin: "0 auto", display: "block" }}>
+    <div
+      style={{
+        textAlign: "center",
+        margin: "50% auto",
+        width: "80%",
+        display: "block",
+        justifyContent: "center",
+      }}
+    >
       <Title
         style={{
           textAlign: "center",
@@ -41,11 +49,6 @@ const LoginForm = ({ emailChange, passwordChange, onSubmit }) => {
             onChange={passwordChange}
           />
         </Form.Item>
-        <Form.Item>
-          <Form.Item name="remember" valuePropName="checked" noStyle>
-            <Checkbox>Remember me</Checkbox>
-          </Form.Item>
-        </Form.Item>
 
         <Form.Item>
           <Button
@@ -53,25 +56,14 @@ const LoginForm = ({ emailChange, passwordChange, onSubmit }) => {
             htmlType="submit"
             className="login-form-button"
             style={{
-              width: "48%",
+              width: "80%",
               backgroundColor: "#669900",
               border: "#669900",
+              height: "50px",
+              fontSize: "1.5rem",
             }}
           >
-            Log in
-          </Button>
-          <Button
-            type="primary"
-            htmlType="submit"
-            className="login-form-button"
-            style={{
-              width: "48%",
-              backgroundColor: "#FEA000",
-              border: "#FEA000",
-              float: "right",
-            }}
-          >
-            Register
+            Submit
           </Button>
         </Form.Item>
       </Form>
