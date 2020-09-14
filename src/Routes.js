@@ -15,7 +15,6 @@ const Routes = () => {
     <HashRouter>
       <div>
         <Navigation />
-
         <Switch>
           <Route path="/login">
             <Login />

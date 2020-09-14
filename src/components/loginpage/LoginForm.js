@@ -1,7 +1,7 @@
 import React from "react";
 import { Form, Input, Checkbox, Button, Typography as Title } from "antd";
 
-const LoginForm = () => {
+const LoginForm = ({ emailChange, passwordChange, onSubmit }) => {
   return (
     <div style={{ width: "50%", margin: "0 auto", display: "block" }}>
       <Title
@@ -18,12 +18,17 @@ const LoginForm = () => {
         name="normal_login"
         className="login-form"
         initialValues={{ remember: true }}
+        onSubmit={onSubmit}
       >
         <Form.Item
           name="username"
           rules={[{ required: true, message: "Please input your Username!" }]}
         >
-          <Input placeholder="Username" style={{ padding: "10px" }} />
+          <Input
+            placeholder="Username"
+            style={{ padding: "10px" }}
+            onChange={emailChange}
+          />
         </Form.Item>
         <Form.Item
           name="password"
@@ -33,6 +38,7 @@ const LoginForm = () => {
             type="password"
             placeholder="Password"
             style={{ padding: "10px" }}
+            onChange={passwordChange}
           />
         </Form.Item>
         <Form.Item>
