@@ -6,13 +6,21 @@ import { Button } from "antd";
 const WelcomePageComponent = ({ header }) => {
   return (
     <div>
-      <div style={{ float: "right", margin: "0", top: "0" }}>
+      <div
+        style={{
+          display: "inline-block",
+          width: "100%",
+          margin: "0 auto",
+          left: "20px",
+        }}
+      >
         <Link to="/register">
           <Button
             type="primary"
             style={{
               margin: "10px auto",
               display: "block",
+              float: "right",
               backgroundColor: "#1F4366",
               border: "#1F4366",
             }}
@@ -26,6 +34,7 @@ const WelcomePageComponent = ({ header }) => {
             style={{
               margin: "10px auto",
               display: "block",
+              float: "right",
               backgroundColor: "#1F4366",
               border: "#1F4366",
             }}
