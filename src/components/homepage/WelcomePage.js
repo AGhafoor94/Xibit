@@ -21,8 +21,8 @@ const WelcomePageComponent = ({ header }) => {
               margin: "10px 10px 0 0",
               display: "block",
               float: "right",
-              backgroundColor: "#1F4366",
-              border: "#1F4366",
+              backgroundColor: "#449D44",
+              border: "#449D44",
             }}
           >
             Sign Up
@@ -35,8 +35,8 @@ const WelcomePageComponent = ({ header }) => {
               margin: "10px 10px 0 0",
               display: "block",
               float: "right",
-              backgroundColor: "#1F4366",
-              border: "#1F4366",
+              backgroundColor: "#669900",
+              border: "#669900",
             }}
           >
             Sign In

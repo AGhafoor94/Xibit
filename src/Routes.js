@@ -3,6 +3,7 @@ import { HashRouter, Switch, Route } from "react-router-dom";
 import { AppContext } from "./App";
 import Homepage from "./components/Homepage/Homepage";
 import Login from "./components/Loginpage/Login";
+import Register from "./components/RegisterPage/Register";
 
 // const UnauthorisedWrapper = (props) => {
 //   return (
@@ -24,6 +25,9 @@ const Routes = () => {
         <Switch>
           <Route path="/login">
             <Login />
+          </Route>
+          <Route path="/register">
+            <Register />
           </Route>
           <Route path="/welcome">
             {user.token ? (

@@ -20,7 +20,7 @@ const LoginForm = ({ emailChange, passwordChange, onSubmit }) => {
           color: "#FEA000",
         }}
       >
-        Log In
+        Register
       </Title>
       <Form
         name="normal_login"
@@ -28,6 +28,26 @@ const LoginForm = ({ emailChange, passwordChange, onSubmit }) => {
         initialValues={{ remember: true }}
         onSubmit={onSubmit}
       >
+        <Form.Item
+          name="firstname"
+          rules={[{ required: true, message: "Please input your Firstname!" }]}
+        >
+          <Input
+            placeholder="First Name"
+            style={{ padding: "10px" }}
+            onChange={emailChange}
+          />
+        </Form.Item>
+        <Form.Item
+          name="lastname"
+          rules={[{ required: true, message: "Please input your Lastname!" }]}
+        >
+          <Input
+            placeholder="Last Name"
+            style={{ padding: "10px" }}
+            onChange={emailChange}
+          />
+        </Form.Item>
         <Form.Item
           name="username"
           rules={[{ required: true, message: "Please input your Username!" }]}
