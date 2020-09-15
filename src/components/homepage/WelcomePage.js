@@ -18,7 +18,7 @@ const WelcomePageComponent = ({ header }) => {
           <Button
             type="primary"
             style={{
-              margin: "10px auto",
+              margin: "10px 10px 0 0",
               display: "block",
               float: "right",
               backgroundColor: "#1F4366",
@@ -32,7 +32,7 @@ const WelcomePageComponent = ({ header }) => {
           <Button
             type="primary"
             style={{
-              margin: "10px auto",
+              margin: "10px 10px 0 0",
               display: "block",
               float: "right",
               backgroundColor: "#1F4366",
@@ -43,7 +43,7 @@ const WelcomePageComponent = ({ header }) => {
           </Button>
         </Link>
       </div>
-      <div style={{ margin: "50% auto" }}>
+      <div style={{ margin: "0 auto" }}>
         <h1 style={{ textAlign: "center", fontSize: "7rem", color: "#FEA000" }}>
           {header}
         </h1>
