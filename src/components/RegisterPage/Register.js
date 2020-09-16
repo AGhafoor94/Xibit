@@ -1,9 +1,12 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import axios from "axios";
 import BasePage from "../BasePage";
 import RegisterForm from "./RegisterForm";
+import UserContext from "../../Context/UserContext";
+const URL = process.env.Url || "http://localhost:3001/auth/login";
 
 const Register = () => {
+  const { setUser } = useContext(UserContext);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [firstName, setFirstName] = useState("");
@@ -26,14 +29,13 @@ const Register = () => {
 
   const onSubmit = async () => {
     try {
-      const { data } = await axios.post("http://localhost:3001/register", {
+      const { data } = await axios.post(URL, {
         email,
         firstName,
         lastName,
         password,
       });
-
-      console.log(data.token);
+      setUser(data);
     } catch (error) {
       setError(error.message);
     }

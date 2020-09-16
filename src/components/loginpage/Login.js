@@ -1,12 +1,16 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import axios from "axios";
 import BasePage from "../BasePage";
 import LoginForm from "./LoginForm";
+import UserContext from "../../Context/UserContext";
 
-const LoginPage = ({ loginValue }) => {
+const URL = process.env.Url || "http://localhost:3001/auth/login";
+
+const LoginPage = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
+  const { setUser } = useContext(UserContext);
 
   const onEmailChange = (event) => {
     setEmail(event.target.value);
@@ -18,12 +22,11 @@ const LoginPage = ({ loginValue }) => {
 
   const onSubmit = async () => {
     try {
-      const { data } = await axios.post("http://localhost:3001/login", {
+      const { data } = await axios.post(URL, {
         email,
         password,
       });
-
-      console.log(data.token);
+      setUser(data);
     } catch (error) {
       setError(error.response.data.message);
     }
