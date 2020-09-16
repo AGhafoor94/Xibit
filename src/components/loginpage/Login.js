@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import axios from "axios";
 import BasePage from "../BasePage";
 import LoginForm from "./LoginForm";
+import Register from "../RegisterPage/Register";
 
 const LoginPage = () => {
   const [email, setEmail] = useState("");
@@ -44,6 +45,8 @@ const LoginPage = () => {
         }
         colour="#FEA000"
       />
+      <p>------------Or Register------------</p>
+      <Register />
     </div>
   );
 };

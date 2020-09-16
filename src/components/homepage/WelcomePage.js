@@ -24,6 +24,9 @@ const WelcomePageComponent = ({ header }) => {
               backgroundColor: "#449D44",
               border: "#449D44",
             }}
+            onClick={() => {
+              console.log("register");
+            }}
           >
             Sign Up
           </Button>
@@ -37,6 +40,9 @@ const WelcomePageComponent = ({ header }) => {
               float: "right",
               backgroundColor: "#669900",
               border: "#669900",
+            }}
+            onClick={() => {
+              console.log("login");
             }}
           >
             Sign In

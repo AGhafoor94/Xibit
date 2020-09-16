@@ -6,7 +6,7 @@ const LoginForm = ({ emailChange, passwordChange, onSubmit }) => {
     <div
       style={{
         textAlign: "center",
-        margin: "50% auto",
+        margin: "0 auto",
         width: "80%",
         display: "block",
         justifyContent: "center",
