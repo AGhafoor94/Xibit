@@ -1,0 +1,18 @@
+.formComponent {
+  text-align: center;
+  margin: 50% auto;
+  width: 80%;
+  display: block;
+  justify-content: center;
+}
+.titleComponent {
+  text-align: center;
+  font-size: 5rem;
+  font-weight: 600;
+  color: #fea000;
+}
+@media screen and (max-width: 900px) {
+  .ant-typography {
+    font-size: 1rem;
+  }
+}

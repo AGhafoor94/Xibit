@@ -1,5 +1,6 @@
 import React from "react";
 import { Form, Input, Button, Typography as Title, Alert } from "antd";
+import "../index.css";
 
 const LoginForm = ({
   onFirstNameChange,
@@ -10,25 +11,8 @@ const LoginForm = ({
   error,
 }) => {
   return (
-    <div
-      style={{
-        textAlign: "center",
-        margin: "0 auto",
-        width: "80%",
-        display: "block",
-        justifyContent: "center",
-      }}
-    >
-      <Title
-        style={{
-          textAlign: "center",
-          fontSize: "5rem",
-          fontWeight: "600",
-          color: "#FEA000",
-        }}
-      >
-        Register
-      </Title>
+    <div className="formComponent">
+      <Title className="titleComponent">Register</Title>
       <Form
         name="normal_login"
         className="login-form"
