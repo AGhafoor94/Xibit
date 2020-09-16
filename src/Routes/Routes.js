@@ -4,7 +4,7 @@ import Homepage from "../components/Homepage/Homepage";
 import Login from "../components/Loginpage/Login";
 import Plans from "../components/Plans/Plans";
 import Register from "../components/RegisterPage/Register";
-import { UserContext } from "../Context/UserContext";
+import UserContext from "../Context/UserContext";
 
 // const UnauthorisedWrapper = (props) => {
 //   return (
