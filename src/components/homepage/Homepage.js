@@ -1,6 +1,4 @@
-import { Button } from "antd";
 import React from "react";
-import { Link } from "react-router-dom";
 import BasePage from "../BasePage";
 import WelcomePageComponent from "./WelcomePage";
 

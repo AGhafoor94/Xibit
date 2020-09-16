@@ -7,7 +7,7 @@ import Register from "../RegisterPage/Register";
 const LoginPage = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [statusMessage, setStatusMessage] = useState("");
+  const [error, setError] = useState("");
 
   const onEmailChange = (event) => {
     setEmail(event.target.value);
@@ -26,11 +26,7 @@ const LoginPage = () => {
 
       console.log(data.token);
     } catch (error) {
-      if (error.response.data.message) {
-        setStatusMessage(error.response.data.message);
-      } else {
-        setStatusMessage("Something went wrong with our servers!");
-      }
+      setError(error.response.data.message);
     }
   };
   return (

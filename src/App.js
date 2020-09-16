@@ -1,14 +1,16 @@
-import React, { useState, createContext } from "react";
-import Routes from "./Routes";
-
-export const AppContext = createContext();
+import React, { useState } from "react";
+import { HashRouter } from "react-router-dom";
+import Routes from "./Routes/Routes";
+import UserContext from "./Context/UserContext";
 
 const App = () => {
   const [user, setUser] = useState({});
   return (
-    <AppContext.Provider value={{ user, setUser }}>
-      <Routes />
-    </AppContext.Provider>
+    <HashRouter>
+      <UserContext.Provider value={{ user, setUser }}>
+        <Routes />
+      </UserContext.Provider>
+    </HashRouter>
   );
 };
 
