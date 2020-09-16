@@ -1,7 +1,14 @@
 import React from "react";
-import { Form, Input, Button, Typography as Title } from "antd";
+import { Form, Input, Button, Typography as Title, Alert } from "antd";
 
-const LoginForm = ({ emailChange, passwordChange, onSubmit }) => {
+const LoginForm = ({
+  onFirstNameChange,
+  onLastNameChange,
+  emailChange,
+  passwordChange,
+  onSubmit,
+  error,
+}) => {
   return (
     <div
       style={{
@@ -35,7 +42,7 @@ const LoginForm = ({ emailChange, passwordChange, onSubmit }) => {
           <Input
             placeholder="First Name"
             style={{ padding: "10px" }}
-            onChange={emailChange}
+            onChange={onFirstNameChange}
           />
         </Form.Item>
         <Form.Item
@@ -45,7 +52,7 @@ const LoginForm = ({ emailChange, passwordChange, onSubmit }) => {
           <Input
             placeholder="Last Name"
             style={{ padding: "10px" }}
-            onChange={emailChange}
+            onChange={onLastNameChange}
           />
         </Form.Item>
         <Form.Item
@@ -86,6 +93,7 @@ const LoginForm = ({ emailChange, passwordChange, onSubmit }) => {
             Submit
           </Button>
         </Form.Item>
+        {error ? <Alert message={error} type="error" /> : null}
       </Form>
     </div>
   );

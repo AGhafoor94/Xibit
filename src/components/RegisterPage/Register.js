@@ -3,12 +3,12 @@ import axios from "axios";
 import BasePage from "../BasePage";
 import RegisterForm from "./RegisterForm";
 
-const LoginPage = () => {
+const Register = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
-  const [statusMessage, setStatusMessage] = useState("");
+  const [error, setError] = useState("");
 
   const onEmailChange = (event) => {
     setEmail(event.target.value);
@@ -35,11 +35,7 @@ const LoginPage = () => {
 
       console.log(data.token);
     } catch (error) {
-      if (error.response.data.message) {
-        setStatusMessage(error.response.data.message);
-      } else {
-        setStatusMessage("Something went wrong with our servers!");
-      }
+      setError(error.message);
     }
   };
   return (
@@ -52,6 +48,7 @@ const LoginPage = () => {
             firstNameChange={onFirstNameChange}
             lastNameChange={onLastNameChange}
             onSubmit={onSubmit}
+            error={setError}
           />
         }
         colour="#FEA000"
@@ -60,4 +57,4 @@ const LoginPage = () => {
   );
 };
 
-export default LoginPage;
+export default Register;

@@ -31,7 +31,7 @@ const Routes = () => {
             {user.token ? <Redirect to="/dashboard" /> : <Login />}
           </Route>
           <Route path="/register" exact>
-            {user.token ? <Redirect to="/dashboard" /> : <Register />}
+            {user.token ? <Redirect to="/login" /> : <Register />}
           </Route>
           <Route path="/plans">
             {user.token ? <Redirect to="/login" /> : <Plans />}

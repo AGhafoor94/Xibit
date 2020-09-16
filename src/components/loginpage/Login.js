@@ -2,9 +2,8 @@ import React, { useState } from "react";
 import axios from "axios";
 import BasePage from "../BasePage";
 import LoginForm from "./LoginForm";
-import Register from "../RegisterPage/Register";
 
-const LoginPage = () => {
+const LoginPage = ({ loginValue }) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
@@ -37,12 +36,11 @@ const LoginPage = () => {
             emailChange={onEmailChange}
             passwordChange={onPasswordChange}
             onSubmit={onSubmit}
+            error={setError}
           />
         }
         colour="#FEA000"
       />
-      <p>------------Or Register------------</p>
-      <Register />
     </div>
   );
 };
