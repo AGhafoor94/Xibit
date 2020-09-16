@@ -2,9 +2,9 @@ import React, { useContext } from "react";
 import { HashRouter, Switch, Route, Redirect } from "react-router-dom";
 import Login from "../components/Loginpage/Login";
 import Plans from "../components/LoggedInComponents/Plans/Plans";
-import Register from "../components/RegisterPage/Register";
 import UserContext from "../Context/UserContext";
 import Dashboard from "../components/LoggedInComponents/Dashboard/Dashboard";
+import Homepage from "../components/Homepage/Homepage";
 
 const Routes = () => {
   const userContext = useContext(UserContext);
@@ -15,16 +15,16 @@ const Routes = () => {
       <div>
         <Switch>
           <Route path="/" exact>
-            {user.token ? <Redirect to="/" /> : <Login />}
+            <Homepage />
           </Route>
           <Route path="/dashboard" exact>
             {user.token ? <Dashboard /> : <Redirect to="/login" />}
           </Route>
           <Route path="/login" exact>
-            {user.token ? <Redirect to="/dashboard" /> : <Login />}
+            <Login formState="login" />
           </Route>
           <Route path="/register" exact>
-            {user.token ? <Redirect to="/login" /> : <Register />}
+            <Login formState="register" />
           </Route>
           <Route path="/plans" exact>
             {user.token ? <Plans /> : <Redirect to="/login" />}
