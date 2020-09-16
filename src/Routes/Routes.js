@@ -5,6 +5,7 @@ import Plans from "../components/LoggedInComponents/Plans/Plans";
 import UserContext from "../Context/UserContext";
 import Dashboard from "../components/LoggedInComponents/Dashboard/Dashboard";
 import Homepage from "../components/Homepage/Homepage";
+import Profile from "../components/LoggedInComponents/Profile/Profile";
 
 const Routes = () => {
   const userContext = useContext(UserContext);
@@ -28,6 +29,9 @@ const Routes = () => {
           </Route>
           <Route path="/plans" exact>
             {user.token ? <Plans /> : <Redirect to="/login" />}
+          </Route>
+          <Route path="/profile" exact>
+            {user.token ? <Profile /> : <Redirect to="/login" />}
           </Route>
         </Switch>
       </div>

@@ -1,7 +1,7 @@
-import Title from "antd/lib/skeleton/Title";
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { Button } from "antd";
+import "../index.css";
 
 const WelcomePageComponent = ({ header }) => {
   return (
@@ -49,11 +49,11 @@ const WelcomePageComponent = ({ header }) => {
           </Button>
         </Link>
       </div>
-      <div style={{ margin: "0 auto" }}>
+      <div style={{ margin: "0 auto" }} className="rightComponent">
         <h1 style={{ textAlign: "center", fontSize: "7rem", color: "#FEA000" }}>
           {header}
         </h1>
-        <Link to="/register">
+        <NavLink to="/aquarium">
           <Button
             type="primary"
             style={{
@@ -68,8 +68,8 @@ const WelcomePageComponent = ({ header }) => {
           >
             Aquariums
           </Button>
-        </Link>
-        <Link to="/login">
+        </NavLink>
+        <NavLink to="/safari">
           <Button
             type="primary"
             style={{
@@ -84,7 +84,7 @@ const WelcomePageComponent = ({ header }) => {
           >
             Safaris
           </Button>
-        </Link>
+        </NavLink>
       </div>
     </div>
   );
