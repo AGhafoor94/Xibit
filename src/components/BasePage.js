@@ -15,7 +15,7 @@ const BasePage = ({ component, colour }) => {
             <div>component here</div>
           </Col>
           <Col className="rightComponent gutter-row " span={12}>
-            {component}
+            <component />
           </Col>
         </Row>
       </Layout>

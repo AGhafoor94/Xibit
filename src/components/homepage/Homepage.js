@@ -1,14 +1,24 @@
+import { Col, Layout, Row } from "antd";
 import React from "react";
-import BasePage from "../BasePage";
 import WelcomePageComponent from "./WelcomePage";
 
 const Homepage = () => {
   return (
     <div>
-      <BasePage
-        component={<WelcomePageComponent header="Xibit" />}
-        colour="#1F4366"
-      />
+      <Layout>
+        <Row style={{ height: "100vh" }}>
+          <Col
+            className="leftContainer gutter-row"
+            span={12}
+            style={{ backgroundColor: "#1F4366" }}
+          >
+            <div>component here</div>
+          </Col>
+          <Col className="rightComponent gutter-row " span={12}>
+            <WelcomePageComponent header="Xibit" />
+          </Col>
+        </Row>
+      </Layout>
     </div>
   );
 };

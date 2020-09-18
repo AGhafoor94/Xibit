@@ -1,33 +1,35 @@
 import React, { useContext, useState, forwardRef } from "react";
-
 import { useHistory } from "react-router-dom";
+
 import axios from "axios";
-import LoginForm from "./LoginForm";
 import UserContext from "../../Context/UserContext";
+import RegisterForm from "./RegisterForm";
 import { Col, Layout, Row } from "antd";
 
-const BASE_URL = process.env.Url || "http://localhost:8000";
+const BASE_URL = process.env.Url || "http://localhost:3001";
 
-const LoginPage = () => {
+const Register = () => {
   let history = useHistory();
-  const { setUser } = useContext(UserContext);
 
+  const { setUser } = useContext(UserContext);
   const [error, setError] = useState("");
 
-  const onSubmit = async ({ email, password }) => {
+  const onSubmit = async ({ email, firstName, lastName, password }) => {
+    console.log("Running");
     try {
-      const { data } = await axios.post(`${BASE_URL}/auth/login`, {
+      const { data } = await axios.post(`http://localhost:8000/auth/register`, {
         email,
+        firstName,
+        lastName,
         password,
       });
       const { token } = data;
       setUser({ email, token });
-      history.replace("/dashboard");
+      history.replace("/login");
     } catch (error) {
       setError(error.message);
     }
   };
-
   return (
     <div>
       <Layout>
@@ -37,10 +39,10 @@ const LoginPage = () => {
             span={12}
             style={{ backgroundColor: "#FEA000" }}
           >
-            <h1>component here</h1>
+            <div>component here</div>
           </Col>
-          <Col className=" gutter-row " span={12}>
-            <LoginForm onSubmit={onSubmit} error={setError} />
+          <Col className="rightComponent gutter-row " span={12}>
+            <RegisterForm onSubmit={onSubmit} error={setError} />
           </Col>
         </Row>
       </Layout>
@@ -48,4 +50,4 @@ const LoginPage = () => {
   );
 };
 
-export default LoginPage;
+export default Register;

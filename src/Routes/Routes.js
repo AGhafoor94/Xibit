@@ -6,6 +6,7 @@ import UserContext from "../Context/UserContext";
 import Dashboard from "../components/LoggedInComponents/Dashboard/Dashboard";
 import Homepage from "../components/Homepage/Homepage";
 import Profile from "../components/LoggedInComponents/Profile/Profile";
+import Register from "../components/RegisterPage/Register";
 
 const Routes = () => {
   const userContext = useContext(UserContext);
@@ -22,10 +23,10 @@ const Routes = () => {
             {user.token ? <Dashboard /> : <Redirect to="/login" />}
           </Route>
           <Route path="/login" exact>
-            <Login formState="login" />
+            <Login />
           </Route>
           <Route path="/register" exact>
-            <Login formState="register" />
+            <Register />
           </Route>
           <Route path="/plans" exact>
             {user.token ? <Plans /> : <Redirect to="/login" />}
