@@ -8,7 +8,8 @@ const BasePage = ({ component, colour }) => {
       <Layout>
         <Row style={{ height: "100vh" }}>
           <Col
-            className="leftContainer gutter-row"
+            id="leftContainer"
+            className=" gutter-row"
             span={12}
             style={{ backgroundColor: `${colour}` }}
           >

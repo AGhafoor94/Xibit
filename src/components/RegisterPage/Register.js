@@ -15,9 +15,8 @@ const Register = () => {
   const [error, setError] = useState("");
 
   const onSubmit = async ({ email, firstName, lastName, password }) => {
-    console.log("Running");
     try {
-      const { data } = await axios.post(`http://localhost:8000/auth/register`, {
+      const { data } = await axios.post(`${BASE_URL}/auth/register`, {
         email,
         firstName,
         lastName,

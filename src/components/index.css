@@ -11,8 +11,12 @@
   font-weight: 600;
   color: #fea000;
 }
-@media screen and (max-width: 900px) {
+@media only screen and (max-width: 900px) {
   .ant-typography {
-    font-size: 1rem;
+    font-size: 2rem;
+  }
+  .ant-col-12 {
+    width: 100%;
+    display: block;
   }
 }
