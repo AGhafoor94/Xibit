@@ -10,7 +10,7 @@ const Dashboard = () => {
   const { selectedXibit } = useContext(AppContext);
   const getXibits = async (user) => {
     console.log(user.token);
-    const { data } = await axios.post(
+    const { data } = await axios.get(
       `http://localhost:3001/api/xibits/aquariums`,
       {
         headers: {
