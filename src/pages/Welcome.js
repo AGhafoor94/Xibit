@@ -1,17 +1,14 @@
 import React, { useContext } from "react";
-import UserContext from "../../Context/UserContext";
 import { Link } from "react-router-dom";
-import axios from "axios";
-import { Button } from "antd";
-import "../index.css";
-import AppContext from "../../Context/AppContext";
 
-const BASE_URL = process.env.Url || "http://localhost:3001";
+import UserContext from "../context/UserContext";
+import AppContext from "../context/AppContext";
+
+import { Button } from "antd";
 
 const WelcomePageComponent = ({ header }) => {
   const { user } = useContext(UserContext);
-  const { selectedXibit, setSelectXibit } = useContext(AppContext);
-  console.log(selectedXibit);
+  const { setSelectXibit } = useContext(AppContext);
   return (
     <div>
       <div

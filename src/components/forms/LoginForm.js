@@ -1,10 +1,10 @@
 import React, { forwardRef } from "react";
+import { NavLink } from "react-router-dom";
+
 import Title from "antd/lib/typography";
 import Form from "antd/lib/form";
 import Input from "antd/lib/input";
 import Button from "antd/lib/button";
-import "../index.css";
-import { NavLink } from "react-router-dom";
 
 const LoginForm = forwardRef(({ onSubmit, error }, ref) => (
   <div ref={ref} className="formComponent">

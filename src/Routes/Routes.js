@@ -1,12 +1,12 @@
 import React, { useContext } from "react";
 import { HashRouter, Switch, Route, Redirect } from "react-router-dom";
-import Login from "../components/Loginpage/Login";
-import Plans from "../components/LoggedInComponents/Plans/Plans";
-import UserContext from "../Context/UserContext";
-import Dashboard from "../components/LoggedInComponents/Dashboard/Dashboard";
-import Homepage from "../components/Homepage/Homepage";
-import Profile from "../components/LoggedInComponents/Profile/Profile";
-import Register from "../components/RegisterPage/Register";
+import Login from "../components/forms/Login";
+import Plans from "../pages/Plans";
+import UserContext from "../context/UserContext";
+import Dashboard from "../pages/Dashboard";
+import Homepage from "../pages/Homepage";
+import Profile from "../pages/Profile";
+import Register from "../components/forms/Register";
 
 const Routes = () => {
   const userContext = useContext(UserContext);
@@ -36,7 +36,7 @@ const Routes = () => {
             {user.token ? <Profile /> : <Redirect to="/login" />}
           </Route>
           <Route path="/xibits/aquariums" exact>
-            {user.token ? <Dashboard /> : <Redirect to="/login" />}
+            <Dashboard />
           </Route>
         </Switch>
       </div>

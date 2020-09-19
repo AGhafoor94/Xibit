@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { HashRouter } from "react-router-dom";
-import Routes from "./Routes/Routes";
-import UserContext from "./Context/UserContext";
-import AppContext from "./Context/AppContext";
+import Routes from "./routes/Routes";
+import UserContext from "./context/UserContext";
+import AppContext from "./context/AppContext";
 
 const App = () => {
   const [user, setUser] = useState({});

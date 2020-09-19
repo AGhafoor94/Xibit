@@ -1,6 +1,6 @@
 import { Col, Layout, Row } from "antd";
 import React from "react";
-import WelcomePageComponent from "./WelcomePage";
+import WelcomePageComponent from "./Welcome";
 
 const Homepage = () => {
   return (

@@ -1,8 +1,11 @@
 import React from "react";
-import { Row, Col, Layout } from "antd";
-import "./index.css";
 
-const BasePage = ({ component, colour }) => {
+import Row from "antd/lib/row";
+import Col from "antd/lib/col";
+import Layout from "antd/lib/layout";
+import "./base.css";
+
+const BasePage = (props, { colour }) => {
   return (
     <div>
       <Layout>
@@ -16,7 +19,7 @@ const BasePage = ({ component, colour }) => {
             <div>component here</div>
           </Col>
           <Col className="rightComponent gutter-row " span={12}>
-            <component />
+            {props.children}
           </Col>
         </Row>
       </Layout>

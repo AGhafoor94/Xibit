@@ -1,7 +1,8 @@
 import React, { useContext } from "react";
-import { Menu } from "antd";
 import { NavLink } from "react-router-dom";
-import UserContext from "../Context/UserContext";
+import UserContext from "../context/UserContext";
+
+import { Menu } from "antd";
 
 const ProtectedRoutes = () => {
   const { setUser } = useContext(UserContext);
