@@ -4,6 +4,7 @@ import Navigation from "../../Navigation/Navigation";
 
 const Dashboard = () => {
   const { user } = useContext(UserContext);
+
   return (
     <div>
       <Navigation />

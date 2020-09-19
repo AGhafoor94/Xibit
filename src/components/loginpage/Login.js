@@ -6,7 +6,7 @@ import LoginForm from "./LoginForm";
 import UserContext from "../../Context/UserContext";
 import { Col, Layout, Row } from "antd";
 
-const BASE_URL = process.env.Url || "http://localhost:8000";
+const BASE_URL = process.env.Url || "http://localhost:3001";
 
 const LoginPage = () => {
   let history = useHistory();
