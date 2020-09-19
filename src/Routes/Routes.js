@@ -1,17 +1,17 @@
 import React, { useContext } from "react";
 import { HashRouter, Switch, Route, Redirect } from "react-router-dom";
-import Login from "../components/forms/Login";
-import Plans from "../pages/Plans";
 import UserContext from "../context/UserContext";
-import Dashboard from "../pages/Dashboard";
-import Homepage from "../pages/Homepage";
-import Profile from "../pages/Profile";
-import Register from "../components/forms/Register";
+
+import { Login } from "../components/forms/Login";
+import { Plans } from "../pages/Plans";
+import { Dashboard } from "../pages/Dashboard";
+import { Homepage } from "../pages/Homepage";
+import { Profile } from "../pages/Profile";
+import { Register } from "../components/forms/Register";
 
 const Routes = () => {
   const userContext = useContext(UserContext);
   const { user } = userContext;
-  console.log(user.token);
 
   return (
     <HashRouter>

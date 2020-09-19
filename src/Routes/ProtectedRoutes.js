@@ -2,9 +2,9 @@ import React, { useContext } from "react";
 import { NavLink } from "react-router-dom";
 import UserContext from "../context/UserContext";
 
-import { Menu } from "antd";
+import Menu from "antd/lib/menu";
 
-const ProtectedRoutes = () => {
+export const ProtectedRoutes = () => {
   const { setUser } = useContext(UserContext);
   return (
     <Menu theme="dark" mode="horizontal">
@@ -32,5 +32,3 @@ const ProtectedRoutes = () => {
     </Menu>
   );
 };
-
-export default ProtectedRoutes;

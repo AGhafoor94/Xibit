@@ -1,11 +1,12 @@
 import React, { useContext } from "react";
 import { NavLink } from "react-router-dom";
 import UserContext from "../../context/UserContext";
-import ProtectedRoutes from "../../routes/ProtectedRoutes";
+
+import { ProtectedRoutes } from "../../routes/ProtectedRoutes";
 
 import Menu from "antd/lib/menu";
 
-const Navigation = () => {
+export const Navigation = () => {
   const { user } = useContext(UserContext);
   if (user.token) {
     return <ProtectedRoutes />;
@@ -24,5 +25,3 @@ const Navigation = () => {
     );
   }
 };
-
-export default Navigation;

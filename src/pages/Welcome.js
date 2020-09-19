@@ -6,7 +6,7 @@ import AppContext from "../context/AppContext";
 
 import { Button } from "antd";
 
-const WelcomePageComponent = ({ header }) => {
+export const Welcome = ({ header }) => {
   const { user } = useContext(UserContext);
   const { setSelectXibit } = useContext(AppContext);
   return (
@@ -94,5 +94,3 @@ const WelcomePageComponent = ({ header }) => {
     </div>
   );
 };
-
-export default WelcomePageComponent;

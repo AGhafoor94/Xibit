@@ -6,7 +6,7 @@ import Form from "antd/lib/form";
 import Input from "antd/lib/input";
 import Button from "antd/lib/button";
 
-const LoginForm = forwardRef(({ onSubmit, error }, ref) => (
+export const LoginForm = forwardRef(({ onSubmit, error }, ref) => (
   <div ref={ref} className="formComponent">
     <Title className="titleComponent">Log In</Title>
     <Form
@@ -64,5 +64,3 @@ const LoginForm = forwardRef(({ onSubmit, error }, ref) => (
     </Form>
   </div>
 ));
-
-export default LoginForm;

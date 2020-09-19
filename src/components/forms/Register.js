@@ -3,7 +3,8 @@ import { useHistory } from "react-router-dom";
 import axios from "axios";
 
 import UserContext from "../../context/UserContext";
-import RegisterForm from "./RegisterForm";
+
+import { RegisterForm } from "./RegisterForm";
 
 import Row from "antd/lib/row";
 import Col from "antd/lib/col";
@@ -12,7 +13,7 @@ import "./forms.css";
 
 const BASE_URL = process.env.Url || "http://localhost:3001";
 
-const Register = () => {
+export const Register = () => {
   let history = useHistory();
 
   const { setUser } = useContext(UserContext);
@@ -52,5 +53,3 @@ const Register = () => {
     </div>
   );
 };
-
-export default Register;

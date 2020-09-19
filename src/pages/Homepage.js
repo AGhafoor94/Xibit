@@ -1,8 +1,8 @@
 import { Col, Layout, Row } from "antd";
 import React from "react";
-import WelcomePageComponent from "./Welcome";
+import { Welcome } from "./Welcome";
 
-const Homepage = () => {
+export const Homepage = () => {
   return (
     <div>
       <Layout>
@@ -15,12 +15,10 @@ const Homepage = () => {
             <div>component here</div>
           </Col>
           <Col className="rightComponent gutter-row " span={12}>
-            <WelcomePageComponent header="Xibit" />
+            <Welcome header="Xibit" />
           </Col>
         </Row>
       </Layout>
     </div>
   );
 };
-
-export default Homepage;
