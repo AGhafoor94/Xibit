@@ -34,7 +34,7 @@ const Register = () => {
       <Layout>
         <Row style={{ height: "100vh" }}>
           <Col
-            className="gutter-row"
+            className="gutter-row display"
             span={12}
             style={{ backgroundColor: "#FEA000" }}
           >

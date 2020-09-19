@@ -11,6 +11,7 @@ import Register from "../components/RegisterPage/Register";
 const Routes = () => {
   const userContext = useContext(UserContext);
   const { user } = userContext;
+  console.log(user.token);
 
   return (
     <HashRouter>
@@ -33,6 +34,9 @@ const Routes = () => {
           </Route>
           <Route path="/profile" exact>
             {user.token ? <Profile /> : <Redirect to="/login" />}
+          </Route>
+          <Route path="/xibits/aquariums" exact>
+            {user.token ? <Dashboard /> : <Redirect to="/login" />}
           </Route>
         </Switch>
       </div>

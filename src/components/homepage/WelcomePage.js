@@ -1,9 +1,17 @@
-import React from "react";
-import { Link, NavLink } from "react-router-dom";
+import React, { useContext } from "react";
+import UserContext from "../../Context/UserContext";
+import { Link } from "react-router-dom";
+import axios from "axios";
 import { Button } from "antd";
 import "../index.css";
+import AppContext from "../../Context/AppContext";
+
+const BASE_URL = process.env.Url || "http://localhost:3001";
 
 const WelcomePageComponent = ({ header }) => {
+  const { user } = useContext(UserContext);
+  const { selectedXibit, setSelectXibit } = useContext(AppContext);
+  console.log(selectedXibit);
   return (
     <div>
       <div
@@ -24,9 +32,6 @@ const WelcomePageComponent = ({ header }) => {
               backgroundColor: "#449D44",
               border: "#449D44",
             }}
-            onClick={() => {
-              console.log("register");
-            }}
           >
             Sign Up
           </Button>
@@ -41,9 +46,6 @@ const WelcomePageComponent = ({ header }) => {
               backgroundColor: "#669900",
               border: "#669900",
             }}
-            onClick={() => {
-              console.log("login");
-            }}
           >
             Sign In
           </Button>
@@ -53,7 +55,7 @@ const WelcomePageComponent = ({ header }) => {
         <h1 style={{ textAlign: "center", fontSize: "7rem", color: "#FEA000" }}>
           {header}
         </h1>
-        <NavLink to="/aquarium">
+        <Link to="/xibits/aquariums">
           <Button
             type="primary"
             style={{
@@ -65,11 +67,14 @@ const WelcomePageComponent = ({ header }) => {
               fontSize: "2.5rem",
               border: "#1F4366",
             }}
+            onClick={() => {
+              setSelectXibit("aquarium");
+            }}
           >
             Aquariums
           </Button>
-        </NavLink>
-        <NavLink to="/safari">
+        </Link>
+        <Link to="/xibits/safari">
           <Button
             type="primary"
             style={{
@@ -81,10 +86,13 @@ const WelcomePageComponent = ({ header }) => {
               border: "#FEA000",
               fontSize: "2.5rem",
             }}
+            onClick={() => {
+              setSelectXibit("safari");
+            }}
           >
             Safaris
           </Button>
-        </NavLink>
+        </Link>
       </div>
     </div>
   );
