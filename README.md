@@ -32,12 +32,12 @@
     Landing Page
     ![alt text](https://github.com/AGhafoor94/xibit/blob/master/designs/landing-page.PNG "Landing Page Design")
     Login Page
-    ![alt text](https://github.com/AGhafoor94/xibit/blob/master/designs/login-page.PNG "Landing Page Design")
+    ![alt text](https://github.com/AGhafoor94/xibit/blob/master/designs/login-page.PNG "Login Design")
     List of Items Page
-    ![alt text](https://github.com/AGhafoor94/xibit/blob/master/designs/list-of-items-page.PNG "Landing Page Design")
+    ![alt text](https://github.com/AGhafoor94/xibit/blob/master/designs/list-of-items-page.PNG "List Page Design")
     Modal Page
-    ![alt text](https://github.com/AGhafoor94/xibit/blob/master/designs/modal-clicked-on-item.PNG "Landing Page Design")
+    ![alt text](https://github.com/AGhafoor94/xibit/blob/master/designs/modal-clicked-on-item.PNG "Modal Clicked Design")
     Full view of zoo Page
-    ![alt text](https://github.com/AGhafoor94/xibit/blob/master/designs/full-view-of-zoo.PNG "Landing Page Design")
+    ![alt text](https://github.com/AGhafoor94/xibit/blob/master/designs/full-view-of-zoo.PNG "Full View Design")
 
 ## Done

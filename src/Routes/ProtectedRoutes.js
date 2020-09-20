@@ -2,7 +2,7 @@ import React, { useContext, useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import UserContext from "../context/UserContext";
 import axios from "axios";
-
+import "./index.css";
 import Menu from "antd/lib/menu";
 import { Button, Dropdown } from "antd";
 import Search from "antd/lib/input/Search";
