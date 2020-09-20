@@ -13,7 +13,7 @@ export const ProtectedRoutes = () => {
   const { plans, setPlans, selectedPlan, setSelectedPlan } = useContext(
     AppContext
   );
-  const BASE_URL = process.env.Url || "http://localhost:3001";
+  const BASE_URL = process.env.URL || "http://localhost:3001";
   useEffect(() => {
     const getPlans = async () => {
       const { data } = await axios.get(`${BASE_URL}/api/plans`, {
@@ -24,21 +24,26 @@ export const ProtectedRoutes = () => {
       setPlans(data);
     };
     getPlans();
-  }, [user.token, setPlans]);
+  }, [user.token, setPlans, BASE_URL]);
 
   const plansMenu = (
     <Menu>
-      {plans.map((item, index) => {
-        return (
-          <Menu.Item
-            onClick={() => {
-              setSelectedPlan(item);
-            }}
-          >
-            {item}
-          </Menu.Item>
-        );
-      })}
+      {plans.length ? (
+        plans.map((item, index) => {
+          return (
+            <Menu.Item
+              key={index}
+              onClick={() => {
+                setSelectedPlan(item);
+              }}
+            >
+              {item.title}
+            </Menu.Item>
+          );
+        })
+      ) : (
+        <Menu.Item>"No Plans"</Menu.Item>
+      )}
     </Menu>
   );
 
@@ -80,14 +85,13 @@ export const ProtectedRoutes = () => {
           }}
         />
       </Menu.Item>
-      {plans.length ? (
-        <Menu.Item>
-          <label>Selected plan: </label>
-          <Dropdown overlay={plansMenu} placement="bottomCenter" arrow>
-            <Button>{selectedPlan ? selectedPlan : "None"}</Button>
-          </Dropdown>
-        </Menu.Item>
-      ) : null}
+
+      <Menu.Item>
+        <label>Selected plan: </label>
+        <Dropdown overlay={plansMenu} placement="bottomCenter" arrow>
+          <Button>{selectedPlan ? selectedPlan.title : "None"}</Button>
+        </Dropdown>
+      </Menu.Item>
       <Menu.Item
         key="logout"
         style={{ float: "right" }}
