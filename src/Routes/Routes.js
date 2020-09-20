@@ -13,8 +13,6 @@ import { Searchpage as Search } from "../pages/Searchpage";
 const Routes = () => {
   const userContext = useContext(UserContext);
   const { user } = userContext;
-  const localToken = localStorage.getItem("token");
-  console.log(localToken);
   return (
     <HashRouter>
       <div>
@@ -23,11 +21,7 @@ const Routes = () => {
             <Homepage />
           </Route>
           <Route path="/dashboard" exact>
-            {user.token || localToken ? (
-              <Dashboard />
-            ) : (
-              <Redirect to="/login" />
-            )}
+            {user.token ? <Dashboard /> : <Redirect to="/login" />}
           </Route>
           <Route path="/login" exact>
             <Login />
@@ -36,27 +30,19 @@ const Routes = () => {
             <Register />
           </Route>
           <Route path="/xibits/aquariums" exact>
-            {user.token || localToken ? (
-              <Dashboard />
-            ) : (
-              <Redirect to="/login" />
-            )}
+            {user.token ? <Dashboard /> : <Redirect to="/login" />}
           </Route>
           <Route path="/xibits/safaris" exact>
-            {user.token || localToken ? (
-              <Dashboard />
-            ) : (
-              <Redirect to="/login" />
-            )}
+            {user.token ? <Dashboard /> : <Redirect to="/login" />}
           </Route>
           <Route path="/xibits/plans" exact>
-            {user.token || localToken ? <Plans /> : <Redirect to="/login" />}
+            {user.token ? <Plans /> : <Redirect to="/login" />}
           </Route>
           <Route path="/xibits/search" exact>
-            {user.token || localToken ? <Search /> : <Redirect to="/login" />}
+            {user.token ? <Search /> : <Redirect to="/login" />}
           </Route>
           <Route path="/profile" exact>
-            {user.token || localToken ? <Profile /> : <Redirect to="/login" />}
+            {user.token ? <Profile /> : <Redirect to="/login" />}
           </Route>
         </Switch>
       </div>

@@ -12,20 +12,19 @@ export const Dashboard = () => {
   const { user } = useContext(UserContext);
   const { selectedXibit } = useContext(AppContext);
   const [results, setResults] = useState([]);
-  const [plans, selectedPlans] = useState();
 
   useEffect(() => {
-    const getXibits = async (user) => {
-      const { data } = await axios.get(`${BASE_URL}/xibits/${selectedXibit}s`, {
+    const getXibits = async () => {
+      const { data } = await axios.get(`${BASE_URL}/xibits/${selectedXibit}`, {
         headers: {
           authorization: `Bearer ${user.token}`,
         },
       });
       setResults(data.queryResults);
-      console.log(data);
     };
-    getXibits(user);
-  }, []);
+    getXibits();
+  }, [selectedXibit, user.token]);
+
   const generateCards = (state) => {
     return state.map((item, index) => {
       return (

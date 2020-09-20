@@ -25,7 +25,8 @@ export const Login = () => {
         password,
       });
       const { token } = data;
-      localStorage.setItem("token", token);
+      const user = { email, token };
+      localStorage.setItem("user", JSON.stringify(user));
 
       setUser({ email, token });
       history.replace("/");
