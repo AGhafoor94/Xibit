@@ -8,7 +8,9 @@ import Button from "antd/lib/button";
 
 export const LoginForm = forwardRef(({ onSubmit, error }, ref) => (
   <div ref={ref} className="formComponent">
-    <Title className="titleComponent">Log In</Title>
+    <Title className="titleComponent" style={{ color: "#FEA000" }}>
+      Log In
+    </Title>
     <Form
       name="normal_login"
       className="login-form"

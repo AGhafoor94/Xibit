@@ -1,9 +1,14 @@
 import React from "react";
 
-export const SearchPage = () => {
-  return (
-    <div>
-      <h1>Search</h1>
-    </div>
-  );
-};
+import Search from "antd/lib/input/Search";
+
+export const Searchpage = () => (
+  <div>
+    <Search
+      placeholder="input search text"
+      enterButton="Search"
+      size="large"
+      onSearch={(value) => console.log(value)}
+    />
+  </div>
+);

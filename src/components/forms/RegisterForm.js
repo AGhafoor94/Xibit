@@ -8,7 +8,9 @@ import Button from "antd/lib/button";
 
 export const RegisterForm = forwardRef(({ onSubmit, error }, ref) => (
   <div ref={ref} className="formComponent">
-    <Title className="titleComponent">Register</Title>
+    <Title className="titleComponent" style={{ color: "#FEA000" }}>
+      Register
+    </Title>
     <Form
       name="normal_login"
       className="login-form"
