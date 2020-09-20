@@ -1,7 +1,7 @@
 import React, { useContext, useState, forwardRef } from "react";
-
 import { useHistory } from "react-router-dom";
 import axios from "axios";
+
 import UserContext from "../../context/UserContext";
 
 import { LoginForm } from "./LoginForm";
@@ -25,6 +25,8 @@ export const Login = () => {
         password,
       });
       const { token } = data;
+      localStorage.setItem("token", token);
+
       setUser({ email, token });
       history.replace("/");
     } catch (error) {

@@ -8,7 +8,9 @@ import Button from "antd/lib/button";
 
 export const LoginForm = forwardRef(({ onSubmit, error }, ref) => (
   <div ref={ref} className="formComponent">
-    <Title className="titleComponent">Log In</Title>
+    <Title className="titleComponent" style={{ color: "#FEA000" }}>
+      Log In
+    </Title>
     <Form
       name="normal_login"
       className="login-form"
@@ -17,17 +19,22 @@ export const LoginForm = forwardRef(({ onSubmit, error }, ref) => (
     >
       <Form.Item
         name="email"
-        rules={[{ required: true, message: "Please input your Username!" }]}
+        // rules={[{ required: true, message: "Please input your Username!" }]}
       >
-        <Input placeholder="Username" style={{ padding: "10px" }} />
+        <Input
+          placeholder="Username"
+          defaultValue="ag@123.com"
+          style={{ padding: "10px" }}
+        />
       </Form.Item>
       <Form.Item
         name="password"
-        rules={[{ required: true, message: "Please input your Password!" }]}
+        // rules={[{ required: true, message: "Please input your Password!" }]}
       >
         <Input
           type="password"
           placeholder="Password"
+          defaultValue="gen"
           style={{ padding: "10px" }}
         />
       </Form.Item>
