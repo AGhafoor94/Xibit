@@ -10,17 +10,12 @@ export const Dashboard = () => {
   const { user } = useContext(UserContext);
   const { selectedXibit } = useContext(AppContext);
   const getXibits = async (user) => {
-    console.log(user.token);
-    const { data } = await axios.get(
-      `http://localhost:3001/api/xibits/aquariums`,
-      {
-        headers: {
-          authorization: `Bearer ${user.token}`,
-        },
-      }
-    );
-
-    console.log({ data });
+    const { data } = await axios.get(`${BASE_URL}/xibits/${selectedXibit}s`, {
+      headers: {
+        authorization: `Bearer ${user.token}`,
+      },
+    });
+    console.log(data);
   };
   getXibits(user);
 

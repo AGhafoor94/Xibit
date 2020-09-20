@@ -6,7 +6,7 @@ import AppContext from "./context/AppContext";
 
 const App = () => {
   const [user, setUser] = useState({});
-  const [selectedXibit, setSelectXibit] = useState("aquarium");
+  const [selectedXibit, setSelectXibit] = useState("aquariums");
   return (
     <HashRouter>
       <UserContext.Provider value={{ user, setUser }}>

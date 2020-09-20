@@ -26,7 +26,7 @@ export const Login = () => {
       });
       const { token } = data;
       setUser({ email, token });
-      history.replace("/dashboard");
+      history.replace("/");
     } catch (error) {
       setError(error.message);
     }

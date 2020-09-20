@@ -36,7 +36,10 @@ const Routes = () => {
             {user.token ? <Profile /> : <Redirect to="/login" />}
           </Route>
           <Route path="/xibits/aquariums" exact>
-            <Dashboard />
+            {user.token ? <Dashboard /> : <Redirect to="/login" />}
+          </Route>
+          <Route path="/xibits/safaris" exact>
+            {user.token ? <Dashboard /> : <Redirect to="/login" />}
           </Route>
         </Switch>
       </div>
