@@ -25,7 +25,8 @@
 - Colour Scheme
 
   - Orange: #FEA000
-  - Green: #669900
+  - Green: #449D44
+  - Light Green: #669900
   - Blue: #1F4366
 
     Landing Page
