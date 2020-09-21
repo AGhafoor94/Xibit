@@ -29,10 +29,10 @@ const Routes = () => {
           <Route path="/register" exact>
             <Register />
           </Route>
-          <Route path="/xibits/aquariums" exact>
+          <Route path="/xibits/aquarium" exact>
             {user.token ? <Dashboard /> : <Redirect to="/login" />}
           </Route>
-          <Route path="/xibits/safaris" exact>
+          <Route path="/xibits/safari" exact>
             {user.token ? <Dashboard /> : <Redirect to="/login" />}
           </Route>
           <Route path="/xibits/plans" exact>

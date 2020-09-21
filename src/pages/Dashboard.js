@@ -15,7 +15,7 @@ export const Dashboard = () => {
 
   useEffect(() => {
     const getXibits = async () => {
-      const { data } = await axios.get(`${BASE_URL}/xibits/${selectedXibit}`, {
+      const { data } = await axios.get(`${BASE_URL}/xibits/${selectedXibit}s`, {
         headers: {
           authorization: `Bearer ${user.token}`,
         },
@@ -29,16 +29,21 @@ export const Dashboard = () => {
     return state.map((item, index) => {
       return (
         <div key={index}>
-          <Cards cardTitle={item.name} cardContent={item.address} />
+          <Cards
+            cardTitle={item.name}
+            cardContent={item.address}
+            cardId={item.id}
+            cardIndex={index}
+          />
         </div>
       );
     });
   };
-
+  console.log(results);
   return (
     <div>
       <Navigation />
-      {results ? generateCards(results) : null}
+      {results ? generateCards(results) : <p>Loading...</p>}
     </div>
   );
 };
