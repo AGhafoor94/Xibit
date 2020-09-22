@@ -6,7 +6,7 @@ import UserContext from "../context/UserContext";
 import { Navigation } from "../components/navigation/Navigation";
 import { Cards } from "../components/Cards";
 
-const BASE_URL = process.env.Url || "http://localhost:3001/api";
+const BASE_URL = process.env.URL || "http://localhost:3001/api";
 
 export const Dashboard = () => {
   const { user } = useContext(UserContext);
@@ -15,7 +15,7 @@ export const Dashboard = () => {
 
   useEffect(() => {
     const getXibits = async () => {
-      const { data } = await axios.get(`${BASE_URL}/xibits/${selectedXibit}`, {
+      const { data } = await axios.get(`${BASE_URL}/xibits/${selectedXibit}s`, {
         headers: {
           authorization: `Bearer ${user.token}`,
         },
@@ -29,16 +29,22 @@ export const Dashboard = () => {
     return state.map((item, index) => {
       return (
         <div key={index}>
-          <Cards cardTitle={item.name} cardContent={item.address} />
+          <Cards
+            cardTitle={item.name}
+            cardContent={item.address}
+            cardId={item.id}
+            cardIndex={index}
+            photoRef={item.photos[0].photo_reference}
+          />
         </div>
       );
     });
   };
-
+  console.log(results);
   return (
     <div>
       <Navigation />
-      {results ? generateCards(results) : null}
+      {results ? generateCards(results) : <p>Loading...</p>}
     </div>
   );
 };

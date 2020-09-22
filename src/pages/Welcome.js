@@ -65,7 +65,7 @@ export const Welcome = ({ header }) => {
             setSelectXibit("aquarium");
           }}
         >
-          <Link to="/xibits/aquariums">Aquariums</Link>
+          <Link to="/xibits/aquarium">Aquariums</Link>
         </Button>
         <Button
           type="primary"
@@ -82,7 +82,7 @@ export const Welcome = ({ header }) => {
             setSelectXibit("safari");
           }}
         >
-          <Link to="/xibits/safaris">Safaris</Link>
+          <Link to="/xibits/safari">Safaris</Link>
         </Button>
       </div>
     </div>
