@@ -6,7 +6,7 @@ import UserContext from "../context/UserContext";
 import { Navigation } from "../components/navigation/Navigation";
 import { Cards } from "../components/Cards";
 
-const BASE_URL = process.env.Url || "http://localhost:3001/api";
+const BASE_URL = process.env.URL || "http://localhost:3001/api";
 
 export const Dashboard = () => {
   const { user } = useContext(UserContext);
@@ -34,6 +34,7 @@ export const Dashboard = () => {
             cardContent={item.address}
             cardId={item.id}
             cardIndex={index}
+            photoRef={item.photos[0].photo_reference}
           />
         </div>
       );

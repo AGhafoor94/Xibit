@@ -14,6 +14,7 @@ export const ProtectedRoutes = () => {
     AppContext
   );
   const BASE_URL = process.env.URL || "http://localhost:3001";
+
   useEffect(() => {
     const getPlans = async () => {
       const { data } = await axios.get(`${BASE_URL}/api/plans`, {
@@ -50,9 +51,7 @@ export const ProtectedRoutes = () => {
   return (
     <Menu theme="dark" mode="horizontal">
       <Menu.Item key="app">
-        <NavLink to="/">
-          <img className="ant-menu-item" src="" alt="logo" />
-        </NavLink>
+        <NavLink to="/">Xibit</NavLink>
       </Menu.Item>
       <Menu.Item key="dashboard">
         <NavLink to="/dashboard">Dashboard</NavLink>
@@ -70,7 +69,7 @@ export const ProtectedRoutes = () => {
           size="large"
           onSearch={(value) => {
             setPlans(value);
-
+            console.log(plans);
             const { data } = axios.post(
               `${BASE_URL}/api/plans`,
               { title: value, createdAt: Date.now() },

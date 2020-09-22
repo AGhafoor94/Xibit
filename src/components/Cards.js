@@ -6,17 +6,34 @@ import Col from "antd/lib/col";
 import Row from "antd/lib/row";
 import { Button } from "antd";
 import AppContext from "../context/AppContext";
+import UserContext from "../context/UserContext";
 
 const BASE_URL = process.env.Url || "http://localhost:3001/api";
 
-export const Cards = ({ cardId, cardIndex, cardTitle, cardContent }) => {
+export const Cards = ({ cardId, cardTitle, cardContent, photoRef }) => {
   const { selectedPlan } = useContext(AppContext);
+  const { user } = useContext(UserContext);
+
   const addToPlan = async () => {
-    console.log(`${cardId} index: ${cardIndex}`);
-    console.log(selectedPlan._id);
+    const xibit = {
+      placeId: cardId,
+      name: cardTitle,
+      address: cardContent,
+      createdAt: Date.now(),
+    };
+    await axios.put(`${BASE_URL}/plans/${selectedPlan._id}`, xibit, {
+      headers: {
+        authorization: `Bearer ${user.token}`,
+      },
+    });
   };
-  const viewPlace = () => {
-    console.log("View");
+  const viewPlace = async () => {
+    const { data } = axios.get(`${BASE_URL}/xibit/${photoRef}`, {
+      headers: {
+        authorization: `Bearer ${user.token}`,
+      },
+    });
+    console.log(data);
   };
   return (
     <div className="site-card-wrapper">
@@ -42,12 +59,3 @@ export const Cards = ({ cardId, cardIndex, cardTitle, cardContent }) => {
     </div>
   );
 };
-
-/*
-{
-    title: 'Plan 1',
-    xibits: [],
-    createdAt: Date.now(),
-    userId: '',
-  },
-*/
