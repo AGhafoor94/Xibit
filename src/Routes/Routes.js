@@ -20,9 +20,6 @@ const Routes = () => {
           <Route path="/" exact>
             <Homepage />
           </Route>
-          <Route path="/dashboard" exact>
-            {user.token ? <Dashboard /> : <Redirect to="/login" />}
-          </Route>
           <Route path="/login" exact>
             <Login />
           </Route>

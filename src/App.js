@@ -11,6 +11,7 @@ const App = () => {
   const [selectedXibit, setSelectXibit] = useState("aquariums");
   const [plans, setPlans] = useState([]);
   const [selectedPlan, setSelectedPlan] = useState();
+  const [planData, sePlanData] = useState();
   return (
     <HashRouter>
       <UserContext.Provider value={{ user, setUser }}>
@@ -22,6 +23,8 @@ const App = () => {
             setPlans,
             selectedPlan,
             setSelectedPlan,
+            planData,
+            sePlanData,
           }}
         >
           <Routes />
