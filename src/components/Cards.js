@@ -33,13 +33,19 @@ export const Cards = ({ cardId, cardTitle, cardContent, photoRef }) => {
         authorization: `Bearer ${user.token}`,
       },
     });
-    console.log(data);
   };
   return (
     <div className="site-card-wrapper">
       <Row style={{ width: "70%", display: "block", margin: "10px auto" }}>
         <Col>
-          <Card title={cardTitle} bordered={false}>
+          <Card
+            title={cardTitle}
+            style={{
+              margin: "10px auto",
+              border: "2px solid #FEA000",
+            }}
+            bordered
+          >
             {cardContent}
           </Card>
           <Button onClick={addToPlan} type="primary" size="large">

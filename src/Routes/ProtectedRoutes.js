@@ -4,17 +4,21 @@ import UserContext from "../context/UserContext";
 import axios from "axios";
 import "./index.css";
 import Menu from "antd/lib/menu";
-import { Button, Dropdown } from "antd";
-import Search from "antd/lib/input/Search";
 import AppContext from "../context/AppContext";
+import Search from "antd/lib/input/Search";
+import { Button, Dropdown } from "antd";
 
 export const ProtectedRoutes = () => {
   const { user, setUser } = useContext(UserContext);
-  const { plans, setPlans, selectedPlan, setSelectedPlan } = useContext(
-    AppContext
-  );
+  const {
+    plans,
+    setPlans,
+    selectedPlan,
+    setSelectedPlan,
+    setPlanData,
+  } = useContext(AppContext);
   const BASE_URL = process.env.URL || "http://localhost:3001";
-
+  console.log(plans);
   useEffect(() => {
     const getPlans = async () => {
       const { data } = await axios.get(`${BASE_URL}/api/plans`, {
@@ -23,6 +27,7 @@ export const ProtectedRoutes = () => {
         },
       });
       setPlans(data);
+      console.log(data);
     };
     getPlans();
   }, [user.token, setPlans, BASE_URL]);
@@ -54,7 +59,7 @@ export const ProtectedRoutes = () => {
         <NavLink to="/">Xibit</NavLink>
       </Menu.Item>
       <Menu.Item key="dashboard">
-        <NavLink to="/dashboard">Dashboard</NavLink>
+        <NavLink to={`/xibits/${plans}`}>Dashboard</NavLink>
       </Menu.Item>
       <Menu.Item key="plans">
         <NavLink to="/xibits/plans">Plans</NavLink>
@@ -69,7 +74,6 @@ export const ProtectedRoutes = () => {
           size="large"
           onSearch={(value) => {
             setPlans(value);
-            console.log(plans);
             const { data } = axios.post(
               `${BASE_URL}/api/plans`,
               { title: value, createdAt: Date.now() },
