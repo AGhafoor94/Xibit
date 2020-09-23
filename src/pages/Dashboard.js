@@ -40,7 +40,6 @@ export const Dashboard = () => {
       );
     });
   };
-  console.log(results);
   return (
     <div>
       <Navigation />

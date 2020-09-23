@@ -10,15 +10,12 @@ import { Button, Dropdown } from "antd";
 
 export const ProtectedRoutes = () => {
   const { user, setUser } = useContext(UserContext);
-  const {
-    plans,
-    setPlans,
-    selectedPlan,
-    setSelectedPlan,
-    setPlanData,
-  } = useContext(AppContext);
+  const { plans, setPlans, selectedPlan, setSelectedPlan } = useContext(
+    AppContext
+  );
+
   const BASE_URL = process.env.URL || "http://localhost:3001";
-  console.log(plans);
+
   useEffect(() => {
     const getPlans = async () => {
       const { data } = await axios.get(`${BASE_URL}/api/plans`, {
@@ -27,7 +24,6 @@ export const ProtectedRoutes = () => {
         },
       });
       setPlans(data);
-      console.log(data);
     };
     getPlans();
   }, [user.token, setPlans, BASE_URL]);
@@ -59,7 +55,7 @@ export const ProtectedRoutes = () => {
         <NavLink to="/">Xibit</NavLink>
       </Menu.Item>
       <Menu.Item key="dashboard">
-        <NavLink to={`/xibits/${plans}`}>Dashboard</NavLink>
+        <NavLink to="/xibits">Dashboard</NavLink>
       </Menu.Item>
       <Menu.Item key="plans">
         <NavLink to="/xibits/plans">Plans</NavLink>
@@ -72,9 +68,8 @@ export const ProtectedRoutes = () => {
           placeholder="Add a plan"
           enterButton="Add"
           size="large"
-          onSearch={(value) => {
-            setPlans(value);
-            const { data } = axios.post(
+          onSearch={async (value) => {
+            const { data } = await axios.post(
               `${BASE_URL}/api/plans`,
               { title: value, createdAt: Date.now() },
               {

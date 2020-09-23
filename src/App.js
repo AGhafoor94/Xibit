@@ -12,6 +12,7 @@ const App = () => {
   const [plans, setPlans] = useState([]);
   const [selectedPlan, setSelectedPlan] = useState();
   const [planData, sePlanData] = useState();
+
   return (
     <HashRouter>
       <UserContext.Provider value={{ user, setUser }}>
