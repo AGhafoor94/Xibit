@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import axios from "axios";
 
 import Card from "antd/lib/card";
@@ -7,12 +7,14 @@ import Row from "antd/lib/row";
 import { Button } from "antd";
 import AppContext from "../context/AppContext";
 import UserContext from "../context/UserContext";
+import Modal from "antd/lib/modal/Modal";
 
 const BASE_URL = process.env.Url || "http://localhost:3001/api";
 
 export const Cards = ({ cardId, cardTitle, cardContent, photoRef }) => {
   const { selectedPlan } = useContext(AppContext);
   const { user } = useContext(UserContext);
+  const [visible, setVisible] = useState();
 
   const addToPlan = async () => {
     const xibit = {
@@ -52,7 +54,9 @@ export const Cards = ({ cardId, cardTitle, cardContent, photoRef }) => {
             Add to Plan
           </Button>
           <Button
-            onClick={viewPlace}
+            onClick={() => {
+              setVisible(true);
+            }}
             type="primary"
             danger
             size="large"
@@ -61,6 +65,19 @@ export const Cards = ({ cardId, cardTitle, cardContent, photoRef }) => {
             View
           </Button>
         </Col>
+        <Modal
+          title={cardTitle}
+          visible={visible}
+          onOk={() => {
+            setVisible(false);
+          }}
+          onCancel={() => {
+            setVisible(false);
+          }}
+        >
+          <p>{cardContent}</p>
+          <p>{cardTitle}</p>
+        </Modal>
       </Row>
     </div>
   );

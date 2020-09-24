@@ -26,6 +26,9 @@ const Routes = () => {
           <Route path="/register" exact>
             <Register />
           </Route>
+          <Route path="/xibits" exact>
+            {user.token ? <Homepage /> : <Redirect to="/login" />}
+          </Route>
           <Route path="/xibits/aquarium" exact>
             {user.token ? <Dashboard /> : <Redirect to="/login" />}
           </Route>

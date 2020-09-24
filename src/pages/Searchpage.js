@@ -5,23 +5,30 @@ import Search from "antd/lib/input/Search";
 import { ProtectedRoutes } from "../routes/ProtectedRoutes";
 import { Radio } from "antd";
 import UserContext from "../context/UserContext";
+import { SearchCard } from "../components/SearchCard";
 
+const BASE_URL = process.env.URL || "http://localhost:3001/api";
 export const Searchpage = () => {
-  const BASE_URL = process.env.URL || "http://localhost:3001/api";
-
-  const [selectedState, setSelectedState] = useState("zoo");
+  const [selectedState, setSelectedState] = useState("safari");
   const { user } = useContext(UserContext);
-  const onChange = (event) => {
-    console.log(event.target.value);
-    setSelectedState(event.target.value);
+  const [getData, setData] = useState();
+  const [visible, setVisible] = useState(false);
+
+  const onChange = ({ target }) => {
+    console.log(target.value);
+    setSelectedState(target.value);
   };
   const options = [
     {
-      label: "Search by Name",
-      value: "zoo",
+      label: "Search Safaris",
+      value: "safari",
     },
     {
-      label: "Search by PostCode",
+      label: "Search Aquariums",
+      value: "aquarium",
+    },
+    {
+      label: "Search by Postcode",
       value: "postcode",
     },
   ];
@@ -43,8 +50,8 @@ export const Searchpage = () => {
           placeholder="Search"
           enterButton="Search"
           size="large"
-          onSearch={(value) => {
-            const { data } = axios.get(
+          onSearch={async (value) => {
+            const { data } = await axios.get(
               `${BASE_URL}/xibit/${selectedState}/search/${value}`,
               {
                 headers: {
@@ -52,8 +59,16 @@ export const Searchpage = () => {
                 },
               }
             );
+            console.log(data);
+            setData(data);
+            setVisible(true);
           }}
         />
+        {visible ? (
+          <SearchCard lat={getData.lat} lng={getData.lng} />
+        ) : (
+          <p>Please select search and type in query</p>
+        )}
       </div>
     </div>
   );
