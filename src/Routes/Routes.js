@@ -6,7 +6,6 @@ import { Login } from "../components/forms/Login";
 import { Plans } from "../pages/Plans";
 import { Dashboard } from "../pages/Dashboard";
 import { Homepage } from "../pages/Homepage";
-import { Profile } from "../pages/Profile";
 import { Register } from "../components/forms/Register";
 import { Searchpage as Search } from "../pages/Searchpage";
 
@@ -40,9 +39,6 @@ const Routes = () => {
           </Route>
           <Route path="/xibits/search" exact>
             {user.token ? <Search /> : <Redirect to="/login" />}
-          </Route>
-          <Route path="/profile" exact>
-            {user.token ? <Profile /> : <Redirect to="/login" />}
           </Route>
         </Switch>
       </div>

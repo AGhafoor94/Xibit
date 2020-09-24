@@ -10,8 +10,6 @@ export const Plans = () => {
   const { selectedPlan } = useContext(AppContext);
   const [planIndex, setPlanIndex] = useState([]);
 
-  console.log(selectedPlan);
-  
   return (
     <div>
       <ProtectedRoutes />
@@ -66,5 +64,4 @@ export const Plans = () => {
       </div>
     </div>
   );
-  console.log(planIndex);
 };

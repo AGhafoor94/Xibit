@@ -10,9 +10,7 @@ export const Homepage = () => (
           className="leftContainer gutter-row"
           span={12}
           style={{ backgroundColor: "#1F4366" }}
-        >
-          <div>component here</div>
-        </Col>
+        ></Col>
         <Col className="rightComponent gutter-row " span={12}>
           <Welcome header="Xibit" />
         </Col>

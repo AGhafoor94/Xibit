@@ -24,7 +24,6 @@ export const Searchpage = () => {
           authorization: `Bearer ${user.token}`,
         },
       });
-      console.log(data.data);
       setApiKey(data.data);
     };
     apiKeyValue();
