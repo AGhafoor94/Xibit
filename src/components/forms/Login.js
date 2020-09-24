@@ -44,7 +44,6 @@ export const Login = () => {
             span={12}
             style={{ backgroundColor: "#FEA000" }}
           >
-            <h1>component here</h1>
           </Col>
           <Col className=" gutter-row " span={12}>
             <LoginForm onSubmit={onSubmit} error={setError} />

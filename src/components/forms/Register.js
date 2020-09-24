@@ -42,9 +42,7 @@ export const Register = () => {
             className="gutter-row display"
             span={12}
             style={{ backgroundColor: "#FEA000" }}
-          >
-            <div>component here</div>
-          </Col>
+          ></Col>
           <Col className="rightComponent gutter-row " span={12}>
             <RegisterForm onSubmit={onSubmit} error={setError} />
           </Col>

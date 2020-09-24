@@ -16,17 +16,17 @@ export const ProtectedRoutes = () => {
 
   const BASE_URL = process.env.URL || "http://localhost:3001";
 
+  const getPlans = async () => {
+    const { data } = await axios.get(`${BASE_URL}/api/plans`, {
+      headers: {
+        authorization: `Bearer ${user.token}`,
+      },
+    });
+    setPlans(data.data);
+  };
   useEffect(() => {
-    const getPlans = async () => {
-      const { data } = await axios.get(`${BASE_URL}/api/plans`, {
-        headers: {
-          authorization: `Bearer ${user.token}`,
-        },
-      });
-      setPlans(data);
-    };
     getPlans();
-  }, [user.token, setPlans, BASE_URL]);
+  }, [getPlans]);
 
   const plansMenu = (
     <Menu>
@@ -69,7 +69,7 @@ export const ProtectedRoutes = () => {
           enterButton="Add"
           size="large"
           onSearch={async (value) => {
-            const { data } = await axios.post(
+            await axios.post(
               `${BASE_URL}/api/plans`,
               { title: value, createdAt: Date.now() },
               {
@@ -78,7 +78,8 @@ export const ProtectedRoutes = () => {
                 },
               }
             );
-            const updatedPlans = [...plans, data];
+            const updatedPlans = getPlans();
+
             setPlans(updatedPlans);
           }}
         />

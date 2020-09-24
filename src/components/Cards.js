@@ -50,9 +50,16 @@ export const Cards = ({ cardId, cardTitle, cardContent, photoRef }) => {
           >
             {cardContent}
           </Card>
-          <Button onClick={addToPlan} type="primary" size="large">
-            Add to Plan
-          </Button>
+          {selectedPlan ? (
+            <Button onClick={addToPlan} type="primary" size="large">
+              Add to Plan
+            </Button>
+          ) : (
+            <Button type="primary" size="large">
+              Please Select A Plan to Add
+            </Button>
+          )}
+
           <Button
             onClick={() => {
               setVisible(true);
