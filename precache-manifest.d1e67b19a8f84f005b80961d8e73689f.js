@@ -1,27 +1,27 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "a222812fa79709321b36093c82313988",
+    "revision": "0a2e3370e6c65949d62e9256e567e0ce",
     "url": "/xibit/index.html"
   },
   {
-    "revision": "82d4b5b371879f2a65d2",
+    "revision": "a733f2cf65a550c9f147",
     "url": "/xibit/static/css/2.99a5358a.chunk.css"
   },
   {
-    "revision": "6e9f913955737033f3de",
+    "revision": "5d77e95cad0afad7d6f4",
     "url": "/xibit/static/css/main.fc642ba1.chunk.css"
   },
   {
-    "revision": "82d4b5b371879f2a65d2",
-    "url": "/xibit/static/js/2.1e827c2e.chunk.js"
+    "revision": "a733f2cf65a550c9f147",
+    "url": "/xibit/static/js/2.5b74c097.chunk.js"
   },
   {
     "revision": "3453b8997016469371284a28c0e873e2",
-    "url": "/xibit/static/js/2.1e827c2e.chunk.js.LICENSE.txt"
+    "url": "/xibit/static/js/2.5b74c097.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "6e9f913955737033f3de",
-    "url": "/xibit/static/js/main.b4d17a6e.chunk.js"
+    "revision": "5d77e95cad0afad7d6f4",
+    "url": "/xibit/static/js/main.7d81d064.chunk.js"
   },
   {
     "revision": "4661c0b2bb1c58c32e15",
