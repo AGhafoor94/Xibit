@@ -23,7 +23,7 @@ export const ProtectedRoutes = () => {
           authorization: `Bearer ${user.token}`,
         },
       });
-      setPlans(data);
+      setPlans(data.data);
     };
     getPlans();
   }, [user.token, setPlans, BASE_URL]);
@@ -32,6 +32,7 @@ export const ProtectedRoutes = () => {
     <Menu>
       {plans.length ? (
         plans.map((item, index) => {
+          console.log(item);
           return (
             <Menu.Item
               key={index}
@@ -79,6 +80,7 @@ export const ProtectedRoutes = () => {
               }
             );
             const updatedPlans = [...plans, data];
+            console.log(plans);
             setPlans(updatedPlans);
           }}
         />
