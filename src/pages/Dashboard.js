@@ -2,11 +2,10 @@ import React, { useContext, useEffect, useState } from "react";
 import axios from "axios";
 import AppContext from "../context/AppContext";
 import UserContext from "../context/UserContext";
+import { BASE_URL } from "../api/constants";
 
 import { Navigation } from "../components/navigation/Navigation";
 import { Cards } from "../components/Cards";
-
-const BASE_URL = process.env.URL || "http://localhost:3001/api";
 
 export const Dashboard = () => {
   const { user } = useContext(UserContext);
@@ -15,11 +14,14 @@ export const Dashboard = () => {
 
   useEffect(() => {
     const getXibits = async () => {
-      const { data } = await axios.get(`${BASE_URL}/xibits/${selectedXibit}s`, {
-        headers: {
-          authorization: `Bearer ${user.token}`,
-        },
-      });
+      const { data } = await axios.get(
+        `${BASE_URL}/api/xibits/${selectedXibit}s`,
+        {
+          headers: {
+            authorization: `Bearer ${user.token}`,
+          },
+        }
+      );
       setResults(data.queryResults);
     };
     getXibits();

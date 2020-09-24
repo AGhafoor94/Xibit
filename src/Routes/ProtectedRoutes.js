@@ -7,14 +7,13 @@ import Menu from "antd/lib/menu";
 import AppContext from "../context/AppContext";
 import Search from "antd/lib/input/Search";
 import { Button, Dropdown } from "antd";
+import { BASE_URL } from "../api/constants";
 
 export const ProtectedRoutes = () => {
   const { user, setUser } = useContext(UserContext);
   const { plans, setPlans, selectedPlan, setSelectedPlan } = useContext(
     AppContext
   );
-
-  const BASE_URL = process.env.URL || "http://localhost:3001";
 
   const getPlans = async () => {
     const { data } = await axios.get(`${BASE_URL}/api/plans`, {

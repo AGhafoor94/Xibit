@@ -8,8 +8,7 @@ import { Button } from "antd";
 import AppContext from "../context/AppContext";
 import UserContext from "../context/UserContext";
 import Modal from "antd/lib/modal/Modal";
-
-const BASE_URL = process.env.Url || "http://localhost:3001/api";
+import { BASE_URL } from "../api/constants";
 
 export const Cards = ({ cardId, cardTitle, cardContent, photoRef }) => {
   const { selectedPlan } = useContext(AppContext);
@@ -23,14 +22,14 @@ export const Cards = ({ cardId, cardTitle, cardContent, photoRef }) => {
       address: cardContent,
       createdAt: Date.now(),
     };
-    await axios.put(`${BASE_URL}/plans/${selectedPlan._id}`, xibit, {
+    await axios.put(`${BASE_URL}/api/plans/${selectedPlan._id}`, xibit, {
       headers: {
         authorization: `Bearer ${user.token}`,
       },
     });
   };
   const viewPlace = async () => {
-    const { data } = axios.get(`${BASE_URL}/xibit/${photoRef}`, {
+    const { data } = axios.get(`${BASE_URL}/api/xibit/${photoRef}`, {
       headers: {
         authorization: `Bearer ${user.token}`,
       },

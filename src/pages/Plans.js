@@ -4,8 +4,6 @@ import { ProtectedRoutes } from "../routes/ProtectedRoutes";
 import { Button, Card, Col, Row } from "antd";
 import Input from "antd/lib/input/Input";
 
-const BASE_URL = "http://localhost:3001/api/plans/";
-
 export const Plans = () => {
   const { selectedPlan } = useContext(AppContext);
   const [planIndex, setPlanIndex] = useState([]);

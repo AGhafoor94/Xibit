@@ -1,6 +1,7 @@
 import React, { useContext, useState, forwardRef } from "react";
 import { useHistory } from "react-router-dom";
 import axios from "axios";
+import { BASE_URL } from "../api/constants";
 
 import UserContext from "../../context/UserContext";
 
@@ -10,8 +11,6 @@ import Row from "antd/lib/row";
 import Col from "antd/lib/col";
 import Layout from "antd/lib/layout";
 import "./forms.css";
-
-const BASE_URL = process.env.Url || "http://localhost:3001";
 
 export const Register = () => {
   let history = useHistory();

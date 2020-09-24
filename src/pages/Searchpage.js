@@ -7,8 +7,7 @@ import { Radio } from "antd";
 import UserContext from "../context/UserContext";
 import { SearchCard } from "../components/SearchCard";
 import AppContext from "../context/AppContext";
-
-const BASE_URL = process.env.URL || "http://localhost:3001/api";
+import { BASE_URL } from "../api/constants";
 
 export const Searchpage = () => {
   const [selectedState, setSelectedState] = useState("safari");
@@ -19,7 +18,7 @@ export const Searchpage = () => {
 
   useEffect(() => {
     const apiKeyValue = async () => {
-      const data = await axios.get(`${BASE_URL}/key`, {
+      const data = await axios.get(`${BASE_URL}/api/key`, {
         headers: {
           authorization: `Bearer ${user.token}`,
         },
@@ -66,7 +65,7 @@ export const Searchpage = () => {
           size="large"
           onSearch={async (value) => {
             const { data } = await axios.get(
-              `${BASE_URL}/xibit/${selectedState}/search/${value}`,
+              `${BASE_URL}/api/xibit/${selectedState}/search/${value}`,
               {
                 headers: {
                   authorization: `Bearer ${user.token}`,
