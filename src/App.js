@@ -12,6 +12,7 @@ const App = () => {
   const [plans, setPlans] = useState([]);
   const [selectedPlan, setSelectedPlan] = useState();
   const [planData, sePlanData] = useState();
+  const [apiKey, setApiKey] = useState();
 
   return (
     <HashRouter>
@@ -26,6 +27,8 @@ const App = () => {
             setSelectedPlan,
             planData,
             sePlanData,
+            apiKey,
+            setApiKey,
           }}
         >
           <Routes />
