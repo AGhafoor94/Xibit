@@ -1,7 +1,7 @@
 import React, { useContext, useState, forwardRef } from "react";
 import { useHistory } from "react-router-dom";
 import axios from "axios";
-import { BASE_URL } from "../api/constants";
+import { BASE_URL } from "../../api/constants";
 
 import UserContext from "../../context/UserContext";
 
