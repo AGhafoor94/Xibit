@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/xibit/static/css/main.fc642ba1.chunk.css",
+    "main.js": "/xibit/static/js/main.32f6c02d.chunk.js",
+    "main.js.map": "/xibit/static/js/main.32f6c02d.chunk.js.map",
+    "runtime-main.js": "/xibit/static/js/runtime-main.4ff6a54c.js",
+    "runtime-main.js.map": "/xibit/static/js/runtime-main.4ff6a54c.js.map",
+    "static/css/2.99a5358a.chunk.css": "/xibit/static/css/2.99a5358a.chunk.css",
+    "static/js/2.1e827c2e.chunk.js": "/xibit/static/js/2.1e827c2e.chunk.js",
+    "static/js/2.1e827c2e.chunk.js.map": "/xibit/static/js/2.1e827c2e.chunk.js.map",
+    "index.html": "/xibit/index.html",
+    "precache-manifest.4f43094136793bba2fc7d1489cd0d829.js": "/xibit/precache-manifest.4f43094136793bba2fc7d1489cd0d829.js",
+    "service-worker.js": "/xibit/service-worker.js",
+    "static/css/2.99a5358a.chunk.css.map": "/xibit/static/css/2.99a5358a.chunk.css.map",
+    "static/css/main.fc642ba1.chunk.css.map": "/xibit/static/css/main.fc642ba1.chunk.css.map",
+    "static/js/2.1e827c2e.chunk.js.LICENSE.txt": "/xibit/static/js/2.1e827c2e.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.4ff6a54c.js",
+    "static/css/2.99a5358a.chunk.css",
+    "static/js/2.1e827c2e.chunk.js",
+    "static/css/main.fc642ba1.chunk.css",
+    "static/js/main.32f6c02d.chunk.js"
+  ]
+}
