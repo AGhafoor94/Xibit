@@ -36,14 +36,24 @@ export const Register = () => {
   return (
     <div>
       <Layout>
-        <Row style={{ height: "100vh" }}>
+        <Row type="flex" style={{ height: "100vh" }}>
           <Col
             className="gutter-row display"
             span={12}
             style={{ backgroundColor: "#FEA000" }}
           ></Col>
-          <Col className="rightComponent gutter-row " span={12}>
-            <RegisterForm onSubmit={onSubmit} error={setError} />
+          <Col
+            style={{
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+            }}
+            className=" gutter-row "
+            span={12}
+          >
+            <div style={{ display: "inline-block", verticalAlign: "middle" }}>
+              <RegisterForm onSubmit={onSubmit} error={setError} />
+            </div>
           </Col>
         </Row>
       </Layout>

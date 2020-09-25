@@ -40,7 +40,7 @@ export const LoginForm = forwardRef(({ onSubmit, error }, ref) => (
           htmlType="submit"
           className="login-form-button"
           style={{
-            width: "80%",
+            width: "100%",
             backgroundColor: "#669900",
             border: "#669900",
             height: "50px",
@@ -60,7 +60,7 @@ export const LoginForm = forwardRef(({ onSubmit, error }, ref) => (
             fontSize: "1.2rem",
           }}
         >
-          Don't have an account? Register
+          Don't have an account? Click here to Register
         </NavLink>
       </Form.Item>
     </Form>

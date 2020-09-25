@@ -21,7 +21,12 @@ export const RegisterForm = forwardRef(({ onSubmit, error }, ref) => (
         name="firstName"
         rules={[{ required: true, message: "Please input your Firstname!" }]}
       >
-        <Input placeholder="First Name" style={{ padding: "10px" }} />
+        <Input
+          placeholder="First Name"
+          style={{
+            padding: "10px",
+          }}
+        />
       </Form.Item>
       <Form.Item
         name="lastName"
@@ -52,7 +57,7 @@ export const RegisterForm = forwardRef(({ onSubmit, error }, ref) => (
           htmlType="submit"
           className="login-form-button"
           style={{
-            width: "80%",
+            width: "100%",
             backgroundColor: "#669900",
             border: "#669900",
             height: "50px",
@@ -72,7 +77,7 @@ export const RegisterForm = forwardRef(({ onSubmit, error }, ref) => (
             fontSize: "1.2rem",
           }}
         >
-          Already have an account? Sign in
+          Already have an account? Click here to Sign in
         </NavLink>
       </Form.Item>
     </Form>

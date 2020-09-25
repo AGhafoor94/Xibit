@@ -1,9 +1,9 @@
 .formComponent {
-  text-align: center;
-  margin: 50% auto;
-  width: 80%;
-  display: block;
-  justify-content: center;
+  margin: 0 auto;
+}
+.ant-form-item-control-input {
+  min-width: 150%;
+  left: -80px;
 }
 .titleComponent {
   text-align: center;
