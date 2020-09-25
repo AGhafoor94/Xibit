@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "0a2e3370e6c65949d62e9256e567e0ce",
+    "revision": "92038255dcf4ca80b8ca1ea4f38063f9",
     "url": "/xibit/index.html"
   },
   {
@@ -8,8 +8,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/xibit/static/css/2.99a5358a.chunk.css"
   },
   {
-    "revision": "5d77e95cad0afad7d6f4",
-    "url": "/xibit/static/css/main.fc642ba1.chunk.css"
+    "revision": "bf91b4167b5ba8ed62b4",
+    "url": "/xibit/static/css/main.8f4edffb.chunk.css"
   },
   {
     "revision": "a733f2cf65a550c9f147",
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/xibit/static/js/2.5b74c097.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "5d77e95cad0afad7d6f4",
-    "url": "/xibit/static/js/main.7d81d064.chunk.js"
+    "revision": "bf91b4167b5ba8ed62b4",
+    "url": "/xibit/static/js/main.5f81d03a.chunk.js"
   },
   {
     "revision": "4661c0b2bb1c58c32e15",
