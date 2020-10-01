@@ -41,3 +41,8 @@
     ![alt text](https://github.com/AGhafoor94/xibit/blob/master/designs/full-view-of-zoo.PNG "Full View Design")
 
 ## Done
+
+- Created Home page, Dashboard, Search, Plans, Routes and Protected Routes pages
+- Added in Authentication and Authorization
+- Added in Designs using Adobe XD
+- Added in Google maps intergration
